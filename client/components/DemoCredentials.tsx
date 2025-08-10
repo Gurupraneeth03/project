@@ -68,13 +68,13 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
                   </p>
                 )}
               </div>
-              <Button 
-                size="sm" 
+              <Button
+                size="sm"
                 variant="outline"
                 onClick={() => onCredentialSelect(account.email, account.password)}
                 className="text-xs"
               >
-                Use Account
+                {t('useAccount')}
               </Button>
             </div>
             <div className="flex items-center space-x-2 text-xs">
