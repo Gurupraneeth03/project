@@ -78,10 +78,10 @@ function FarmerDashboardHome() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
-              {farmerStats.currentLoan > 0 ? `₹${farmerStats.currentLoan.toLocaleString()}` : 'No Active Loan'}
+              {farmerStats.currentLoan > 0 ? `₹${farmerStats.currentLoan.toLocaleString()}` : t('noActiveLoan')}
             </div>
             <p className="text-xs text-muted-foreground">
-              {farmerStats.currentLoan > 0 ? 'Active Loan Amount' : 'Apply For New Loan'}
+              {farmerStats.currentLoan > 0 ? t('activeLoanAmount') : t('applyForNewLoan')}
             </p>
           </CardContent>
         </Card>
@@ -94,33 +94,33 @@ function FarmerDashboardHome() {
           <CardContent>
             <div className="text-2xl font-bold">{farmerStats.activeCrops}</div>
             <p className="text-xs text-muted-foreground">
-              Currently Growing
+              {t('currentlyGrowing')}
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Land Size</CardTitle>
+            <CardTitle className="text-sm font-medium">{t('landSize')}</CardTitle>
             <TrendingUp className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{farmerStats.landSize}</div>
             <p className="text-xs text-muted-foreground">
-              Total Farming Area
+              {t('totalFarmingArea')}
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Farming Experience</CardTitle>
+            <CardTitle className="text-sm font-medium">{t('farmingExperience')}</CardTitle>
             <FileText className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{farmerStats.completedCrops}</div>
             <p className="text-xs text-muted-foreground">
-              Completed Harvests
+              {t('completedHarvests')}
             </p>
           </CardContent>
         </Card>
@@ -132,7 +132,7 @@ function FarmerDashboardHome() {
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle>{t('currentCropStatus')}</CardTitle>
             <Button variant="outline" size="sm" onClick={() => navigate('/farmer-dashboard/crops')}>
-              View All
+              {t('viewAll')}
             </Button>
           </CardHeader>
           <CardContent>
@@ -144,7 +144,7 @@ function FarmerDashboardHome() {
                       <div className="text-2xl">{crop.image}</div>
                       <div>
                         <h4 className="font-medium">{crop.name}</h4>
-                        <p className="text-sm text-gray-600">Area: {crop.area}</p>
+                        <p className="text-sm text-gray-600">{t('area')}: {crop.area}</p>
                       </div>
                     </div>
                     <Badge variant={
