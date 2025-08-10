@@ -45,9 +45,9 @@ export default function HowItWorks() {
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">The Complete Process</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('theCompleteProcess')}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A simple 3-step process that benefits wealthy investors, needy farmers, and promotes organic agriculture
+              {t('simpleThreeStepProcess')}
             </p>
           </div>
 
