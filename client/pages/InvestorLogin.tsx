@@ -81,13 +81,13 @@ export default function InvestorLogin() {
 
     // Validation
     if (registerForm.password !== registerForm.confirmPassword) {
-      setError("Passwords don't match");
+      setError(t('passwordsDontMatch'));
       setIsLoading(false);
       return;
     }
 
     if (registerForm.password.length < 6) {
-      setError("Password must be at least 6 characters");
+      setError(t('passwordTooShort'));
       setIsLoading(false);
       return;
     }
@@ -99,7 +99,7 @@ export default function InvestorLogin() {
       });
 
       if (response.success) {
-        setSuccess("Registration successful! You can now login.");
+        setSuccess(t('registrationSuccessful'));
         setIsRegistering(false);
         setRegisterForm({
           fullName: "",
@@ -117,10 +117,10 @@ export default function InvestorLogin() {
           confirmPassword: ""
         });
       } else {
-        setError(response.error || "Registration failed");
+        setError(response.error || t('registrationFailed'));
       }
     } catch (err) {
-      setError("An unexpected error occurred");
+      setError(t('unexpectedError'));
     } finally {
       setIsLoading(false);
     }
@@ -273,7 +273,7 @@ export default function InvestorLogin() {
                           id="fullName"
                           value={registerForm.fullName}
                           onChange={(e) => setRegisterForm({...registerForm, fullName: e.target.value})}
-                          placeholder="Ramesh"
+                          placeholder={t('fullName')}
                           required
                         />
                       </div>
@@ -321,7 +321,7 @@ export default function InvestorLogin() {
                             id="occupation"
                             value={registerForm.occupation}
                             onChange={(e) => setRegisterForm({...registerForm, occupation: e.target.value})}
-                            placeholder="Software Engineer"
+                            placeholder={t('software')}
                             required
                           />
                         </div>
@@ -334,8 +334,8 @@ export default function InvestorLogin() {
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="en">English</SelectItem>
-                            <SelectItem value="te">తెలుగు</SelectItem>
+                            <SelectItem value="en">{t('english')}</SelectItem>
+                            <SelectItem value="te">{t('telugu')}</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -353,7 +353,7 @@ export default function InvestorLogin() {
                           id="address"
                           value={registerForm.address}
                           onChange={(e) => setRegisterForm({...registerForm, address: e.target.value})}
-                          placeholder="Street address, Building name, etc."
+                          placeholder={t('streetAddress')}
                           required
                         />
                       </div>
