@@ -158,31 +158,31 @@ function InvestorDashboardHome() {
             <div className="space-y-4">
               {[
                 {
-                  type: 'Investment',
-                  description: 'New Investment In Tomato Farming',
+                  type: t('investment'),
+                  description: t('newInvestmentInTomatoFarming'),
                   amount: '+₹25,000',
-                  date: '2 Days Ago',
-                  status: 'Completed'
+                  date: t('twoDaysAgo'),
+                  status: t('completed')
                 },
                 {
-                  type: 'Benefit',
-                  description: 'Organic Produce Discount Used',
+                  type: t('benefit'),
+                  description: t('organicProduceDiscountUsed'),
                   amount: '-₹850',
-                  date: '1 Week Ago',
-                  status: 'Completed'
+                  date: t('oneWeekAgo'),
+                  status: t('completed')
                 },
                 {
-                  type: 'Update',
-                  description: 'Crop Progress Update Received',
+                  type: t('update'),
+                  description: t('cropProgressUpdateReceived'),
                   amount: '',
-                  date: '3 Days Ago',
-                  status: 'Info'
+                  date: t('threeDaysAgo'),
+                  status: t('info')
                 }
               ].map((activity, index) => (
                 <div key={index} className="flex items-center justify-between py-2">
                   <div className="flex items-start space-x-3">
                     <div className={`w-2 h-2 rounded-full mt-2 ${
-                      activity.status === 'Completed' ? 'bg-green-500' : 'bg-blue-500'
+                      activity.status === t('completed') ? 'bg-green-500' : 'bg-blue-500'
                     }`} />
                     <div>
                       <p className="text-sm font-medium">{activity.description}</p>
