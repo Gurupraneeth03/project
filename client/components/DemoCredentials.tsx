@@ -79,11 +79,11 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
             </div>
             <div className="flex items-center space-x-2 text-xs">
               <div className="flex items-center space-x-1">
-                <span className="text-gray-500">Email:</span>
+                <span className="text-gray-500">{t('email')}:</span>
                 <code className="bg-gray-100 px-1 rounded">{account.email}</code>
-                <Button 
-                  size="sm" 
-                  variant="ghost" 
+                <Button
+                  size="sm"
+                  variant="ghost"
                   className="h-4 w-4 p-0"
                   onClick={() => copyToClipboard(account.email)}
                 >
@@ -91,11 +91,11 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
                 </Button>
               </div>
               <div className="flex items-center space-x-1">
-                <span className="text-gray-500">Password:</span>
+                <span className="text-gray-500">{t('password')}:</span>
                 <code className="bg-gray-100 px-1 rounded">{account.password}</code>
-                <Button 
-                  size="sm" 
-                  variant="ghost" 
+                <Button
+                  size="sm"
+                  variant="ghost"
                   className="h-4 w-4 p-0"
                   onClick={() => copyToClipboard(account.password)}
                 >
