@@ -57,7 +57,7 @@ export default function FarmerLogin() {
       if (response.success && response.user) {
         // Check if user is a farmer
         if (response.user.type !== 'farmer') {
-          setError("Access denied. This login is for farmers only.");
+          setError(t('accessDenied'));
           setIsLoading(false);
           return;
         }
