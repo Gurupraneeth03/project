@@ -63,17 +63,17 @@ export default function HowItWorks() {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-center">Wealthy Investor Provides Loan</CardTitle>
+                <CardTitle className="text-center">{t('wealthyInvestorProvidesLoan')}</CardTitle>
                 <CardDescription className="text-center">
-                  Investors browse needy farmer applications and provide loans based on crop type, land size, and funding requirements
+                  {t('investorsProvidesLoanDesc')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />Review farmer loan applications</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />Select farmers to support</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />Provide loan without traditional interest</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />Track farmer and crop progress</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />{t('reviewFarmerApplications')}</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />{t('selectFarmersToSupport')}</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />{t('provideLoanWithoutInterest')}</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-primary mr-2" />{t('trackFarmerProgress')}</li>
                 </ul>
               </CardContent>
             </Card>
@@ -89,17 +89,17 @@ export default function HowItWorks() {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Sprout className="h-8 w-8 text-green-600" />
                 </div>
-                <CardTitle className="text-center">Farmer Grows Organic Crops</CardTitle>
+                <CardTitle className="text-center">{t('farmerGrowsOrganicCrops')}</CardTitle>
                 <CardDescription className="text-center">
-                  Needy farmers use the loan to cultivate organic crops, focusing on quality and sustainable farming practices
+                  {t('farmerGrowsDesc')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-600 mr-2" />Purchase organic seeds and supplies</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-600 mr-2" />Maintain certified organic standards</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-600 mr-2" />Regular crop progress updates</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-600 mr-2" />Harvest quality organic produce</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-600 mr-2" />{t('purchaseOrganicSeeds')}</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-600 mr-2" />{t('maintainOrganicStandards')}</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-600 mr-2" />{t('regularCropUpdates')}</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-600 mr-2" />{t('harvestQualityProduce')}</li>
                 </ul>
               </CardContent>
             </Card>
@@ -115,17 +115,17 @@ export default function HowItWorks() {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <ShoppingCart className="h-8 w-8 text-accent" />
                 </div>
-                <CardTitle className="text-center">Investor Receives Organic Discounts</CardTitle>
+                <CardTitle className="text-center">{t('investorReceivesDiscounts')}</CardTitle>
                 <CardDescription className="text-center">
-                  Instead of traditional interest, investors receive substantial discounts on fresh organic produce from supported farmers
+                  {t('investorReceivesDesc')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />Receive loan principal repayment</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />Get organic produce discounts</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />Access to premium organic vegetables</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />Health benefits for the family</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />{t('receiveLoanRepayment')}</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />{t('getOrganicDiscounts')}</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />{t('accessPremiumVegetables')}</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 text-accent mr-2" />{t('healthBenefitsFamily')}</li>
                 </ul>
               </CardContent>
             </Card>
