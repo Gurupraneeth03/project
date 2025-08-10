@@ -272,21 +272,21 @@ export default function HowItWorks() {
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
                   <div>
-                    <h4 className="font-semibold">Provide Loans</h4>
-                    <p className="text-sm text-gray-600">Select farmers to support and provide loans through our secure platform</p>
+                    <h4 className="font-semibold">{t('provideLoans')}</h4>
+                    <p className="text-sm text-gray-600">{t('selectFarmersSupport')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
                   <div>
-                    <h4 className="font-semibold">Enjoy Organic Benefits</h4>
-                    <p className="text-sm text-gray-600">Receive organic produce discounts and track crop progress from your supported farmers</p>
+                    <h4 className="font-semibold">{t('enjoyOrganicBenefits')}</h4>
+                    <p className="text-sm text-gray-600">{t('receiveDiscountsTrack')}</p>
                   </div>
                 </div>
               </div>
               <Link to="/investor-login">
                 <Button size="lg" className="w-full">
-                  Start Supporting Farmers
+                  {t('startSupportingFarmers')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -294,40 +294,40 @@ export default function HowItWorks() {
 
             {/* For Farmers */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-green-600">For Farmers</h3>
+              <h3 className="text-2xl font-bold text-green-600">{t('forFarmers')}</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
                   <div>
-                    <h4 className="font-semibold">Register Your Farm</h4>
-                    <p className="text-sm text-gray-600">Provide your details including Aadhaar, farm location, land size, and farming type</p>
+                    <h4 className="font-semibold">{t('registerYourFarm')}</h4>
+                    <p className="text-sm text-gray-600">{t('provideDetailsFarmer')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
                   <div>
-                    <h4 className="font-semibold">Submit Loan Application</h4>
-                    <p className="text-sm text-gray-600">Specify your crop type, land area, and required loan amount with farming plan</p>
+                    <h4 className="font-semibold">{t('submitLoanApplication')}</h4>
+                    <p className="text-sm text-gray-600">{t('specifyCropRequirements')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
                   <div>
-                    <h4 className="font-semibold">Receive Funding</h4>
-                    <p className="text-sm text-gray-600">Get loan approval and funding from supporting investors through our platform</p>
+                    <h4 className="font-semibold">{t('receiveFunding')}</h4>
+                    <p className="text-sm text-gray-600">{t('getLoanApproval')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
                   <div>
-                    <h4 className="font-semibold">Grow & Supply</h4>
-                    <p className="text-sm text-gray-600">Cultivate organic crops and supply fresh produce for investor discount benefits</p>
+                    <h4 className="font-semibold">{t('growAndSupply')}</h4>
+                    <p className="text-sm text-gray-600">{t('cultivateOrganicCrops')}</p>
                   </div>
                 </div>
               </div>
               <Link to="/farmer-login">
                 <Button size="lg" variant="outline" className="w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white">
-                  Apply for Farming Loan
+                  {t('applyForFarmingLoan')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
