@@ -120,12 +120,12 @@ export default function FarmerLoans() {
                 {t('loanManagement')}
               </h1>
               <p className="text-gray-600 mt-2">
-                Manage Your Agricultural Loans And Apply For New Funding
+                {t('manageLoanDescription')}
               </p>
             </div>
             <Button onClick={() => setShowApplication(true)}>
               <Plus className="h-4 w-4 mr-2" />
-              Apply For New Loan
+              {t('applyForNewLoan')}
             </Button>
           </div>
         </div>
@@ -134,39 +134,39 @@ export default function FarmerLoans() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Total Borrowed</CardTitle>
+              <CardTitle className="text-sm font-medium">{t('totalBorrowed')}</CardTitle>
               <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">₹{totalBorrowed.toLocaleString()}</div>
               <p className="text-xs text-muted-foreground">
-                Across {allLoans.length} Loans
+                {t('acrossLoans').replace('{count}', allLoans.length.toString())}
               </p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Remaining Amount</CardTitle>
+              <CardTitle className="text-sm font-medium">{t('remainingAmount')}</CardTitle>
               <TrendingDown className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">₹{totalRemaining.toLocaleString()}</div>
               <p className="text-xs text-muted-foreground">
-                Amount Yet To Be Repaid
+                {t('amountYetToRepaid')}
               </p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Active Loans</CardTitle>
+              <CardTitle className="text-sm font-medium">{t('activeLoans')}</CardTitle>
               <FileText className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{activeLoanCount}</div>
               <p className="text-xs text-muted-foreground">
-                Currently Active
+                {t('currentlyActive')}
               </p>
             </CardContent>
           </Card>
@@ -197,19 +197,19 @@ export default function FarmerLoans() {
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                   <div>
-                    <p className="text-sm text-gray-600">Interest Rate</p>
-                    <p className="font-medium">{loan.interestRate}% Per Annum</p>
+                    <p className="text-sm text-gray-600">{t('interestRate')}</p>
+                    <p className="font-medium">{loan.interestRate}% {t('perAnnum')}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Crop Cycle</p>
+                    <p className="text-sm text-gray-600">{t('cropCycle')}</p>
                     <p className="font-medium">{loan.cropCycle}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Due Date</p>
+                    <p className="text-sm text-gray-600">{t('dueDate')}</p>
                     <p className="font-medium">{loan.dueDate}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Repayment Status</p>
+                    <p className="text-sm text-gray-600">{t('repaymentStatus')}</p>
                     <p className="font-medium text-green-600">{loan.repaymentStatus}</p>
                   </div>
                 </div>
@@ -218,13 +218,13 @@ export default function FarmerLoans() {
                 {loan.status.toLowerCase() === 'active' && (
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span>Repayment Progress</span>
+                      <span>{t('repaymentProgress')}</span>
                       <span>{((loan.amount - loan.remainingAmount) / loan.amount * 100).toFixed(1)}%</span>
                     </div>
                     <Progress value={(loan.amount - loan.remainingAmount) / loan.amount * 100} className="h-2" />
                     <div className="flex justify-between text-xs text-gray-500">
-                      <span>Paid: ₹{(loan.amount - loan.remainingAmount).toLocaleString()}</span>
-                      <span>Remaining: ₹{loan.remainingAmount.toLocaleString()}</span>
+                      <span>{t('paid')}: ₹{(loan.amount - loan.remainingAmount).toLocaleString()}</span>
+                      <span>{t('remaining')}: ₹{loan.remainingAmount.toLocaleString()}</span>
                     </div>
                   </div>
                 )}
@@ -233,36 +233,36 @@ export default function FarmerLoans() {
                 <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-4">
-                      <h4 className="font-medium text-gray-900">Loan Information</h4>
+                      <h4 className="font-medium text-gray-900">{t('loanInformation')}</h4>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Principal Amount:</span>
+                          <span className="text-gray-600">{t('principalAmount')}:</span>
                           <span className="font-medium">₹{loan.amount.toLocaleString()}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Interest Rate:</span>
-                          <span className="font-medium">{loan.interestRate}% Per Annum</span>
+                          <span className="text-gray-600">{t('interestRate')}:</span>
+                          <span className="font-medium">{loan.interestRate}% {t('perAnnum')}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Loan Purpose:</span>
+                          <span className="text-gray-600">{t('loanPurpose')}:</span>
                           <span className="font-medium">{loan.purpose}</span>
                         </div>
                       </div>
                     </div>
                     
                     <div className="space-y-4">
-                      <h4 className="font-medium text-gray-900">Repayment Information</h4>
+                      <h4 className="font-medium text-gray-900">{t('repaymentInformation')}</h4>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Total Repaid:</span>
+                          <span className="text-gray-600">{t('totalRepaid')}:</span>
                           <span className="font-medium">₹{(loan.amount - loan.remainingAmount).toLocaleString()}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Remaining:</span>
+                          <span className="text-gray-600">{t('remaining')}:</span>
                           <span className="font-medium">₹{loan.remainingAmount.toLocaleString()}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Final Due Date:</span>
+                          <span className="text-gray-600">{t('finalDueDate')}:</span>
                           <span className="font-medium">{loan.dueDate}</span>
                         </div>
                       </div>

@@ -304,8 +304,8 @@ function PreviousCropsHistory() {
   return (
     <div className="max-w-7xl mx-auto p-6">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Previous Crops History</h1>
-        <p className="text-gray-600 mt-2">Track your farming journey and harvest records</p>
+        <h1 className="text-3xl font-bold text-gray-900">{t('previousCropsHistory')}</h1>
+        <p className="text-gray-600 mt-2">{t('trackFarmingJourney')}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -321,11 +321,11 @@ function PreviousCropsHistory() {
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-600">Yield:</span>
+                  <span className="text-sm text-gray-600">{t('yield')}:</span>
                   <span className="font-medium">{crop.yield}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-600">Profit:</span>
+                  <span className="text-sm text-gray-600">{t('profit')}:</span>
                   <span className="font-medium text-green-600">{crop.profit}</span>
                 </div>
               </div>
@@ -349,8 +349,8 @@ function PreviousLoansHistory() {
   return (
     <div className="max-w-7xl mx-auto p-6">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Previous Loans History</h1>
-        <p className="text-gray-600 mt-2">Review your loan history and repayment records</p>
+        <h1 className="text-3xl font-bold text-gray-900">{t('previousLoansHistory')}</h1>
+        <p className="text-gray-600 mt-2">{t('reviewLoanHistory')}</p>
       </div>
 
       <div className="space-y-4">
@@ -361,7 +361,7 @@ function PreviousLoansHistory() {
                 <div>
                   <h3 className="font-semibold text-lg">₹{loan.amount.toLocaleString()}</h3>
                   <p className="text-gray-600">{loan.purpose}</p>
-                  <p className="text-sm text-gray-500">Applied: {loan.date} | Repaid: {loan.repaymentDate}</p>
+                  <p className="text-sm text-gray-500">{t('appliedDate')}: {loan.date} | {t('repaidDate')}: {loan.repaymentDate}</p>
                 </div>
                 <Badge variant="secondary">{loan.status}</Badge>
               </div>

@@ -57,7 +57,7 @@ export default function FarmerLogin() {
       if (response.success && response.user) {
         // Check if user is a farmer
         if (response.user.type !== 'farmer') {
-          setError("Access denied. This login is for farmers only.");
+          setError(t('accessDenied'));
           setIsLoading(false);
           return;
         }
@@ -65,10 +65,10 @@ export default function FarmerLogin() {
         login(response.user);
         navigate('/farmer-dashboard');
       } else {
-        setError(response.error || "Login failed");
+        setError(response.error || t('loginFailed'));
       }
     } catch (err) {
-      setError("An unexpected error occurred");
+      setError(t('unexpectedError'));
     } finally {
       setIsLoading(false);
     }
@@ -82,13 +82,13 @@ export default function FarmerLogin() {
 
     // Validation
     if (registerForm.password !== registerForm.confirmPassword) {
-      setError("Passwords don't match");
+      setError(t('passwordsDontMatch'));
       setIsLoading(false);
       return;
     }
 
     if (registerForm.password.length < 6) {
-      setError("Password must be at least 6 characters");
+      setError(t('passwordTooShort'));
       setIsLoading(false);
       return;
     }
@@ -101,7 +101,7 @@ export default function FarmerLogin() {
       });
 
       if (response.success) {
-        setSuccess("Registration successful! You can now login.");
+        setSuccess(t('registrationSuccessful'));
         setIsRegistering(false);
         setRegisterForm({
           fullName: "",
@@ -120,10 +120,10 @@ export default function FarmerLogin() {
           confirmPassword: ""
         });
       } else {
-        setError(response.error || "Registration failed");
+        setError(response.error || t('registrationFailed'));
       }
     } catch (err) {
-      setError("An unexpected error occurred");
+      setError(t('unexpectedError'));
     } finally {
       setIsLoading(false);
     }
@@ -334,7 +334,7 @@ export default function FarmerLogin() {
                           id="village"
                           value={registerForm.village}
                           onChange={(e) => setRegisterForm({...registerForm, village: e.target.value})}
-                          placeholder="Village name"
+                          placeholder={t('villageName')}
                           required
                         />
                       </div>
@@ -346,7 +346,7 @@ export default function FarmerLogin() {
                             id="district"
                             value={registerForm.district}
                             onChange={(e) => setRegisterForm({...registerForm, district: e.target.value})}
-                            placeholder="District name"
+                            placeholder={t('districtName')}
                             required
                           />
                         </div>
@@ -356,7 +356,7 @@ export default function FarmerLogin() {
                             id="state"
                             value={registerForm.state}
                             onChange={(e) => setRegisterForm({...registerForm, state: e.target.value})}
-                            placeholder="State name"
+                            placeholder={t('stateName')}
                             required
                           />
                         </div>
@@ -410,7 +410,7 @@ export default function FarmerLogin() {
                           id="accountNumber"
                           value={registerForm.accountNumber}
                           onChange={(e) => setRegisterForm({...registerForm, accountNumber: e.target.value})}
-                          placeholder="Account number"
+                          placeholder={t('accountNumber')}
                           required
                         />
                       </div>
@@ -432,7 +432,7 @@ export default function FarmerLogin() {
                             id="bankName"
                             value={registerForm.bankName}
                             onChange={(e) => setRegisterForm({...registerForm, bankName: e.target.value})}
-                            placeholder="Bank name"
+                            placeholder={t('bankName')}
                             required
                           />
                         </div>

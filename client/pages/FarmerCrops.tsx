@@ -115,17 +115,17 @@ export default function FarmerCrops() {
               {t('currentCropStatus')}
             </h1>
             <p className="text-gray-600 mt-2">
-              Monitor your crops' health and growth progress
+              {t('monitorCropsHealth')}
             </p>
           </div>
           <div className="flex space-x-3">
             <Button variant="outline">
               <RefreshCw className="h-4 w-4 mr-2" />
-              Refresh Data
+              {t('refreshData')}
             </Button>
             <Button>
               <Plus className="h-4 w-4 mr-2" />
-              Add New Crop
+              {t('addNewCrop')}
             </Button>
           </div>
         </div>
@@ -152,16 +152,16 @@ export default function FarmerCrops() {
               <CardContent>
                 <Tabs defaultValue="overview" className="space-y-4">
                   <TabsList className="grid w-full grid-cols-3">
-                    <TabsTrigger value="overview">Overview</TabsTrigger>
-                    <TabsTrigger value="conditions">Conditions</TabsTrigger>
-                    <TabsTrigger value="progress">Progress</TabsTrigger>
+                    <TabsTrigger value="overview">{t('overview')}</TabsTrigger>
+                    <TabsTrigger value="conditions">{t('conditions')}</TabsTrigger>
+                    <TabsTrigger value="progress">{t('progress')}</TabsTrigger>
                   </TabsList>
                   
                   <TabsContent value="overview" className="space-y-4">
                     {/* Growth Progress */}
                     <div className="space-y-2">
                       <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium">Growth Progress</span>
+                        <span className="text-sm font-medium">{t('growthProgress')}</span>
                         <span className="text-sm text-gray-600">{crop.progress}%</span>
                       </div>
                       <Progress value={crop.progress} className="h-3" />
@@ -172,14 +172,14 @@ export default function FarmerCrops() {
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
                           <Calendar className="h-4 w-4 text-gray-400" />
-                          <span className="text-sm text-gray-600">Planted</span>
+                          <span className="text-sm text-gray-600">{t('planted')}</span>
                         </div>
                         <p className="font-medium">{crop.plantedDate}</p>
                       </div>
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2">
                           <Calendar className="h-4 w-4 text-gray-400" />
-                          <span className="text-sm text-gray-600">Harvest</span>
+                          <span className="text-sm text-gray-600">{t('harvest')}</span>
                         </div>
                         <p className="font-medium">{crop.expectedHarvest}</p>
                       </div>
@@ -190,7 +190,7 @@ export default function FarmerCrops() {
                       <div className="space-y-2">
                         <h4 className="font-medium text-orange-600 flex items-center">
                           <AlertTriangle className="h-4 w-4 mr-2" />
-                          Alerts
+                          {t('alerts')}
                         </h4>
                         {crop.alerts.map((alert: any, index: number) => (
                           <div key={index} className="p-3 bg-orange-50 border border-orange-200 rounded-lg">
@@ -202,7 +202,7 @@ export default function FarmerCrops() {
 
                     {/* Notes */}
                     <div className="space-y-2">
-                      <h4 className="font-medium">Notes</h4>
+                      <h4 className="font-medium">{t('notes')}</h4>
                       <p className="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg">
                         {crop.notes}
                       </p>
@@ -215,7 +215,7 @@ export default function FarmerCrops() {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-2">
                             <Droplets className="h-4 w-4 text-blue-500" />
-                            <span className="text-sm">Water Level</span>
+                            <span className="text-sm">{t('waterLevel')}</span>
                           </div>
                           <span className={`text-sm font-medium ${getWaterLevelColor(crop.waterLevel)}`}>
                             {crop.waterLevel}
@@ -225,7 +225,7 @@ export default function FarmerCrops() {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-2">
                             <Sprout className="h-4 w-4 text-green-500" />
-                            <span className="text-sm">Nutrients</span>
+                            <span className="text-sm">{t('nutrients')}</span>
                           </div>
                           <span className="text-sm font-medium">{crop.nutrients}</span>
                         </div>
@@ -233,7 +233,7 @@ export default function FarmerCrops() {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-2">
                             <Thermometer className="h-4 w-4 text-red-500" />
-                            <span className="text-sm">Temperature</span>
+                            <span className="text-sm">{t('temperature')}</span>
                           </div>
                           <span className="text-sm font-medium">{crop.temperature}</span>
                         </div>
@@ -243,13 +243,13 @@ export default function FarmerCrops() {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-2">
                             <Sun className="h-4 w-4 text-yellow-500" />
-                            <span className="text-sm">Humidity</span>
+                            <span className="text-sm">{t('humidity')}</span>
                           </div>
                           <span className="text-sm font-medium">{crop.humidity}</span>
                         </div>
                         
                         <div className="flex items-center justify-between">
-                          <span className="text-sm">Soil pH</span>
+                          <span className="text-sm">{t('soilPh')}</span>
                           <span className="text-sm font-medium">{crop.soilPh}</span>
                         </div>
                       </div>
@@ -286,10 +286,10 @@ export default function FarmerCrops() {
                 <div className="flex space-x-2 pt-4 border-t">
                   <Button variant="outline" size="sm" className="flex-1">
                     <Camera className="h-4 w-4 mr-2" />
-                    Add Photo
+                    {t('addPhoto')}
                   </Button>
                   <Button variant="outline" size="sm" className="flex-1">
-                    Update Status
+                    {t('updateStatus')}
                   </Button>
                 </div>
               </CardContent>
@@ -304,13 +304,13 @@ export default function FarmerCrops() {
               <div className="text-gray-400 mb-4">
                 <Sprout className="h-16 w-16 mx-auto" />
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">No crops planted yet</h3>
+              <h3 className="text-lg font-medium text-gray-900 mb-2">{t('noCropsPlanted')}</h3>
               <p className="text-gray-600 mb-6">
-                Start your farming journey by planting your first crop
+                {t('startFarmingJourney')}
               </p>
               <Button>
                 <Plus className="h-4 w-4 mr-2" />
-                Plant New Crop
+                {t('plantNewCrop')}
               </Button>
             </CardContent>
           </Card>
@@ -319,33 +319,33 @@ export default function FarmerCrops() {
         {/* Weather and Environmental Info */}
         <Card className="mt-6">
           <CardHeader>
-            <CardTitle>Environmental Conditions</CardTitle>
+            <CardTitle>{t('environmentalConditions')}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl mb-2">☀️</div>
-                <p className="text-sm text-gray-600">Weather</p>
-                <p className="font-semibold">Sunny</p>
+                <p className="text-sm text-gray-600">{t('weather')}</p>
+                <p className="font-semibold">{t('sunny')}</p>
                 <p className="text-xs text-gray-500">29°C</p>
               </div>
               <div className="text-center">
                 <div className="text-3xl mb-2">💧</div>
-                <p className="text-sm text-gray-600">Rainfall</p>
+                <p className="text-sm text-gray-600">{t('rainfall')}</p>
                 <p className="font-semibold">5mm</p>
-                <p className="text-xs text-gray-500">Last 24hrs</p>
+                <p className="text-xs text-gray-500">{t('last24hrs')}</p>
               </div>
               <div className="text-center">
                 <div className="text-3xl mb-2">🌪️</div>
-                <p className="text-sm text-gray-600">Wind</p>
+                <p className="text-sm text-gray-600">{t('wind')}</p>
                 <p className="font-semibold">12 km/h</p>
-                <p className="text-xs text-gray-500">NE direction</p>
+                <p className="text-xs text-gray-500">{t('neDirection')}</p>
               </div>
               <div className="text-center">
                 <div className="text-3xl mb-2">💨</div>
-                <p className="text-sm text-gray-600">Humidity</p>
+                <p className="text-sm text-gray-600">{t('humidity')}</p>
                 <p className="font-semibold">68%</p>
-                <p className="text-xs text-gray-500">Optimal range</p>
+                <p className="text-xs text-gray-500">{t('optimalRange')}</p>
               </div>
             </div>
           </CardContent>

@@ -163,7 +163,7 @@ export default function DashboardNavigation({ children }: DashboardNavigationPro
           >
             <LogOut className="h-5 w-5 flex-shrink-0" />
             {!isSidebarCollapsed && (
-              <span className="ml-3">Logout</span>
+              <span className="ml-3">{t('logout')}</span>
             )}
           </Button>
         </div>
@@ -233,7 +233,7 @@ export default function DashboardNavigation({ children }: DashboardNavigationPro
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={handleLogout} className="text-red-600">
                   <LogOut className="h-4 w-4 mr-2" />
-                  Logout
+                  {t('logout')}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

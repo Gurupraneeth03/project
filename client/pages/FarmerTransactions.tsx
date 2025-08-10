@@ -221,7 +221,7 @@ export default function FarmerTransactions() {
           {t('transactions')}
         </h1>
         <p className="text-gray-600 mt-2">
-          Track Your Financial Activities And Transaction History
+          {t('trackFinancialDescription')}
         </p>
       </div>
 
@@ -229,7 +229,7 @@ export default function FarmerTransactions() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Income</CardTitle>
+            <CardTitle className="text-sm font-medium">{t('totalIncome')}</CardTitle>
             <ArrowUpRight className="h-4 w-4 text-green-600" />
           </CardHeader>
           <CardContent>
@@ -237,14 +237,14 @@ export default function FarmerTransactions() {
               {formatCurrency(totalIncome)}
             </div>
             <p className="text-xs text-muted-foreground">
-              From Sales And Subsidies
+              {t('fromSalesSubsidies')}
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Expense</CardTitle>
+            <CardTitle className="text-sm font-medium">{t('totalExpense')}</CardTitle>
             <ArrowDownRight className="h-4 w-4 text-red-600" />
           </CardHeader>
           <CardContent>
@@ -252,14 +252,14 @@ export default function FarmerTransactions() {
               {formatCurrency(totalExpense)}
             </div>
             <p className="text-xs text-muted-foreground">
-              Farming And Other Costs
+              {t('farmingOtherCosts')}
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Net Income</CardTitle>
+            <CardTitle className="text-sm font-medium">{t('netIncome')}</CardTitle>
             <TrendingUp className={`h-4 w-4 ${netIncome >= 0 ? 'text-green-600' : 'text-red-600'}`} />
           </CardHeader>
           <CardContent>
@@ -281,7 +281,7 @@ export default function FarmerTransactions() {
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                 <Input
-                  placeholder="Search Transactions..."
+                  placeholder={t('searchTransactions')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-10"
@@ -295,21 +295,21 @@ export default function FarmerTransactions() {
                 size="sm"
                 onClick={() => setSelectedType('all')}
               >
-                All Types
+                {t('allTypes')}
               </Button>
               <Button 
                 variant={selectedType === 'income' ? 'default' : 'outline'} 
                 size="sm"
                 onClick={() => setSelectedType('income')}
               >
-                Income
+                {t('income')}
               </Button>
               <Button 
                 variant={selectedType === 'expense' ? 'default' : 'outline'} 
                 size="sm"
                 onClick={() => setSelectedType('expense')}
               >
-                Expense
+                {t('expense')}
               </Button>
             </div>
 
@@ -319,27 +319,27 @@ export default function FarmerTransactions() {
                 size="sm"
                 onClick={() => setSelectedPeriod('all')}
               >
-                All Time
+                {t('allTime')}
               </Button>
               <Button 
                 variant={selectedPeriod === '30' ? 'default' : 'outline'} 
                 size="sm"
                 onClick={() => setSelectedPeriod('30')}
               >
-                Last 30 Days
+                {t('last30Days')}
               </Button>
               <Button 
                 variant={selectedPeriod === '90' ? 'default' : 'outline'} 
                 size="sm"
                 onClick={() => setSelectedPeriod('90')}
               >
-                Last 3 Months
+                {t('last3Months')}
               </Button>
             </div>
 
             <Button variant="outline" size="sm">
               <Download className="h-4 w-4 mr-2" />
-              Export
+              {t('export')}
             </Button>
           </div>
         </CardContent>
@@ -348,7 +348,7 @@ export default function FarmerTransactions() {
       {/* Transactions List */}
       <Card>
         <CardHeader>
-          <CardTitle>Transaction History</CardTitle>
+          <CardTitle>{t('transactionHistory')}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
