@@ -344,7 +344,28 @@ const translations: Record<Language, Record<string, string>> = {
     loanRepaymentStatus: "Loan Repayment Status",
     organicProduceQuality: "Organic Produce Quality",
     investorBenefits: "Investor Discount Benefits",
-    farmToTable: "Farm To Table Organic Supply"
+    farmToTable: "Farm To Table Organic Supply",
+
+    // Testimonials - Reflecting loan-to-discount business model
+    testimonials: "Success Stories",
+    whatOurUsersAreSaying: "What Our Community Is Saying",
+    testimonialsDescription: "Real experiences from investors providing loans and farmers receiving support",
+    organicFarmer: "Organic Farmer",
+    investorFromMumbai: "Loan Provider from Mumbai",
+    investorFromHyderabad: "Supporting Investor from Hyderabad",
+    testimonial1Text: "Providing loans to organic farmers through AgroFina has been incredibly rewarding. Instead of cash returns, I receive amazing discounts on fresh organic produce that my family loves. It's investing with a purpose!",
+    testimonial2Text: "Getting a loan through AgroFina transformed my farming. No complex EMI pressure - just focus on growing quality organic crops. My supporting investors even visit my farm and appreciate the produce quality!",
+    testimonial3Text: "I love supporting needy farmers while getting substantial discounts on the healthiest organic vegetables and fruits. My investment helps families while keeping my own family healthy. Perfect win-win model!",
+    testimonial1Name: "Rajesh Kumar",
+    testimonial2Name: "Priya Reddy",
+    testimonial3Name: "Amit Patel",
+
+    // Contact page additional terms
+    phone: "Phone",
+    email: "Email",
+    address: "Address",
+    workingHours: "Working Hours",
+    hoursInfo: "Monday - Friday: 9:00 AM - 6:00 PM"
   },
   
   // Telugu translations (keeping similar structure but with accurate Telugu translations)
@@ -359,14 +380,14 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Updated Telugu translations for the business model
     sustainableInvestment: "🌱 సేంద్రీయ వ్యవసాయ పెట్టుబడి వేదిక",
-    heroDescription: "ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలపండి. పెట్టుబడిదారులు పంట సాగుకు రుణాలు అందించి, సాంప్రదాయిక వడ్డీకి బదులుగా తాజా సేంద్రీయ ఉత్పత్తులపై తగ్గింపులు పొందుతారు.",
+    heroDescription: "ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలపండి. పెట్టుబడిదారులు పంట సాగుకు రుణాలు అందించి, సాంప్రదాయిక వడ్డీకి ��దులుగా తాజా సేంద్రీయ ఉత్పత్తులపై తగ్గింపులు పొందుతారు.",
     
     farmerDashboard: "రైతు డ్యాష్‌బోర్డ్",
     investorDashboard: "పెట్టుబడిదారుల డ్యాష్‌బోర్డ్",
     farmerDashboardDescription: "మీ పంట, భూమి పరిమాణం మరియు నిధుల అవసరాలను పేర్కొంటూ సేంద్రీయ వ్యవసాయ రుణాలకు దరఖాస్తు చేసుకోండి.",
     investorDashboardDescription: "మీ రైతు రుణాలను నిర్వహించండి మరియు మీ సేంద్రీయ ఉత్పత్తి తగ్గింపు ప్రయోజనాలను ట్రాక్ చేయండి",
     
-    currentLoan: "ప్రస్త��త రుణం",
+    currentLoan: "ప్రస్తుత రుణం",
     activeCrops: "ప్రస్తుత పంటలు",
     cropHistory: "మునుపటి పంటల చరిత్ర",
     loanHistory: "మునుపటి రుణాల చరిత్ర",
