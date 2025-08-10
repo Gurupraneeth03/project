@@ -148,16 +148,16 @@ function FarmerDashboardHome() {
                       </div>
                     </div>
                     <Badge variant={
-                      crop.healthStatus === 'Excellent' ? 'default' : 
+                      crop.healthStatus === 'Excellent' ? 'default' :
                       crop.healthStatus === 'Good' ? 'secondary' : 'destructive'
                     }>
-                      {crop.healthStatus}
+                      {t(crop.healthStatus.toLowerCase())}
                     </Badge>
                   </div>
                   
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span>Growth Progress</span>
+                      <span>{t('growthProgress')}</span>
                       <span>{crop.progress}%</span>
                     </div>
                     <Progress value={crop.progress} className="h-2" />
@@ -174,7 +174,7 @@ function FarmerDashboardHome() {
                     </div>
                     <div className="flex items-center space-x-2">
                       <Calendar className="h-4 w-4 text-green-500" />
-                      <span className="text-gray-600">May 15</span>
+                      <span className="text-gray-600">{t('may15')}</span>
                     </div>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ function FarmerDashboardHome() {
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle>{t('loanManagement')}</CardTitle>
             <Button variant="outline" size="sm" onClick={() => navigate('/farmer-dashboard/loans')}>
-              {farmerStats.currentLoan > 0 ? 'Manage Loan' : 'Apply For Loan'}
+              {farmerStats.currentLoan > 0 ? t('manageLoan') : t('applyForLoan')}
             </Button>
           </CardHeader>
           <CardContent>
@@ -198,23 +198,23 @@ function FarmerDashboardHome() {
                   <div className="flex items-center justify-between mb-3">
                     <div>
                       <h4 className="font-medium">₹{farmerStats.currentLoan.toLocaleString()}</h4>
-                      <p className="text-sm text-gray-600">Seasonal Crop Loan</p>
+                      <p className="text-sm text-gray-600">{t('seasonalCropLoan')}</p>
                     </div>
-                    <Badge variant="default">Active</Badge>
+                    <Badge variant="default">{t('active')}</Badge>
                   </div>
                   
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span>Loan Status</span>
-                      <span className="text-green-600">Approved & Disbursed</span>
+                      <span>{t('loanStatus')}</span>
+                      <span className="text-green-600">{t('approvedAndDisbursed')}</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span>Purpose</span>
-                      <span>Organic Vegetable Farming</span>
+                      <span>{t('purpose')}</span>
+                      <span>{t('organicVegetableFarming')}</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span>Application Date</span>
-                      <span>Jan 15, 2024</span>
+                      <span>{t('applicationDate')}</span>
+                      <span>{t('jan15_2024')}</span>
                     </div>
                   </div>
                 </div>
