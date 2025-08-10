@@ -64,7 +64,7 @@ export default function InvestorLogin() {
         login(response.user);
         navigate('/investor-dashboard');
       } else {
-        setError(response.error || "Login failed");
+        setError(response.error || t('loginFailed'));
       }
     } catch (err) {
       setError("An unexpected error occurred");
