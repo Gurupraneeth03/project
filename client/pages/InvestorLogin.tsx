@@ -56,7 +56,7 @@ export default function InvestorLogin() {
       if (response.success && response.user) {
         // Check if user is an investor
         if (response.user.type !== 'investor') {
-          setError("Access denied. This login is for investors only.");
+          setError(t('accessDeniedInvestor'));
           setIsLoading(false);
           return;
         }
