@@ -223,12 +223,12 @@ function FarmerDashboardHome() {
                   <div className="text-gray-400 mb-3">
                     <DollarSign className="h-12 w-12 mx-auto" />
                   </div>
-                  <h4 className="font-medium text-gray-900 mb-2">No Active Loans</h4>
+                  <h4 className="font-medium text-gray-900 mb-2">{t('noActiveLoans')}</h4>
                   <p className="text-sm text-gray-600 mb-4">
-                    Apply for a seasonal loan to support your crop cultivation
+                    {t('applyForSeasonalLoan')}
                   </p>
                   <Button size="sm" onClick={() => navigate('/farmer-dashboard/loans')}>
-                    Apply For Loan
+                    {t('applyForLoan')}
                   </Button>
                 </div>
               )}
@@ -241,43 +241,43 @@ function FarmerDashboardHome() {
       <div className="mt-8">
         <Card>
           <CardHeader>
-            <CardTitle>Today's Farm Insights</CardTitle>
+            <CardTitle>{t('todaysFarmInsights')}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg">
                 <Droplets className="h-8 w-8 text-blue-600" />
                 <div>
-                  <p className="text-sm text-blue-700 font-medium">Soil Moisture</p>
+                  <p className="text-sm text-blue-700 font-medium">{t('soilMoisture')}</p>
                   <p className="text-xl font-bold text-blue-700">68%</p>
-                  <p className="text-xs text-blue-600">Optimal Level</p>
+                  <p className="text-xs text-blue-600">{t('optimalLevel')}</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3 p-4 bg-yellow-50 rounded-lg">
                 <Sun className="h-8 w-8 text-yellow-600" />
                 <div>
-                  <p className="text-sm text-yellow-700 font-medium">Sunlight</p>
+                  <p className="text-sm text-yellow-700 font-medium">{t('sunlight')}</p>
                   <p className="text-xl font-bold text-yellow-700">7.2 hrs</p>
-                  <p className="text-xs text-yellow-600">Good Exposure</p>
+                  <p className="text-xs text-yellow-600">{t('goodExposure')}</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3 p-4 bg-green-50 rounded-lg">
                 <Thermometer className="h-8 w-8 text-green-600" />
                 <div>
-                  <p className="text-sm text-green-700 font-medium">Temperature</p>
+                  <p className="text-sm text-green-700 font-medium">{t('temperature')}</p>
                   <p className="text-xl font-bold text-green-700">28°C</p>
-                  <p className="text-xs text-green-600">Ideal Range</p>
+                  <p className="text-xs text-green-600">{t('idealRange')}</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3 p-4 bg-purple-50 rounded-lg">
                 <Activity className="h-8 w-8 text-purple-600" />
                 <div>
-                  <p className="text-sm text-purple-700 font-medium">Crop Health</p>
+                  <p className="text-sm text-purple-700 font-medium">{t('cropHealth')}</p>
                   <p className="text-xl font-bold text-purple-700">95%</p>
-                  <p className="text-xs text-purple-600">Excellent</p>
+                  <p className="text-xs text-purple-600">{t('excellent')}</p>
                 </div>
               </div>
             </div>
