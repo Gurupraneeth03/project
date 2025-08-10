@@ -19,7 +19,7 @@ const formatToTitleCase = (text: string): string => {
     .trim();
 };
 
-// Translation object - All dashboard related text converted to Title Case
+// Translation object with accurate business model information
 const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navigation - All converted to Title Case
@@ -30,67 +30,67 @@ const translations: Record<Language, Record<string, string>> = {
     investorLogin: "Investor Login",
     farmerLogin: "Farmer Login",
     
-    // Hero Section
-    sustainableInvestment: "🌱 Sustainable Investment Platform",
+    // Hero Section - Updated to reflect actual business model
+    sustainableInvestment: "🌱 Organic Farming Investment Platform",
     investIn: "Invest In",
-    organicFarming: " Organic Farming",
-    harvestReturns: "Harvest Returns",
-    heroDescription: "Connect investors with organic farmers through our innovative platform. Support sustainable agriculture while earning returns through fresh produce and loan repayments.",
+    organicFarming: " Organic Farmers",
+    harvestReturns: "Harvest Organic Benefits",
+    heroDescription: "Connect wealthy investors with needy organic farmers. Investors provide loans for crop cultivation and receive discounts on fresh organic produce instead of traditional interest payments.",
     startInvesting: "Start Investing",
-    applyForFunding: "Apply For Funding",
+    applyForFunding: "Apply For Farming Loan",
     
-    // How It Works Section
+    // How It Works Section - Accurate business model explanation
     howAgroFinaWorks: "How AgroFina Works",
-    howItWorksDescription: "Our platform bridges the gap between investors and organic farmers through a structured, seasonal investment model.",
+    howItWorksDescription: "Our platform connects wealthy investors with needy farmers through an innovative loan-to-discount model that benefits everyone.",
     
-    // Investment Process
+    // Investment Process - Updated to reflect loan-based model
     investmentProcess: "1. Investment Process",
-    investmentProcessDescription: "Investors fund organic farming projects through our platform with structured seasonal investments.",
-    threeSeasonalTerms: "Three Seasonal Terms Yearly",
-    preduringpost: "Pre, During, And Post Production",
-    transparentTC: "Transparent Terms And Conditions And Returns",
+    investmentProcessDescription: "Wealthy investors provide loans to needy farmers through our secure platform, supporting organic agriculture development.",
+    threeSeasonalTerms: "Seasonal Loan Distribution",
+    preduringpost: "Pre, During, And Post Harvest Support",
+    transparentTC: "Transparent Loan Terms And Organic Discount Benefits",
     
-    // Farmer Support
+    // Farmer Support - Updated to reflect loan application process
     farmerSupport: "2. Farmer Support",
-    farmerSupportDescription: "Organic farmers receive funding in three phases to support their complete production cycle.",
-    preProductionFunding: "Pre Production Funding",
-    duringProductionSupport: "During Production Support",
-    postProductionAssistance: "Post Production Assistance",
+    farmerSupportDescription: "Needy farmers apply for loans by specifying their crop type, land size, and required funding amount for organic cultivation.",
+    preProductionFunding: "Pre Season Loan Disbursement",
+    duringProductionSupport: "Growing Season Financial Support",
+    postProductionAssistance: "Harvest Season Assistance",
     
-    // Returns & Benefits
+    // Returns & Benefits - Updated to reflect organic discount model
     returnsAndBenefits: "3. Returns And Benefits",
-    returnsDescription: "Investors receive loan repayments plus organic produce discounts, creating mutual benefits.",
-    exactLoanRepayment: "Exact Loan Amount Repayment",
-    organicProduceSupply: "Organic Produce Supply",
-    percentageDiscounts: "Percentage Discounts",
+    returnsDescription: "Instead of traditional interest, investors receive valuable discounts on fresh organic produce grown by the farmers they supported.",
+    exactLoanRepayment: "Principal Loan Amount Repayment",
+    organicProduceSupply: "Fresh Organic Produce Access",
+    percentageDiscounts: "Significant Produce Discounts",
     
     // Why Choose Section
     whyChooseAgroFina: "Why Choose AgroFina?",
-    whyChooseDescription: "Experience the benefits of sustainable investing with our innovative platform.",
+    whyChooseDescription: "Experience the benefits of supporting organic farming while receiving healthy returns through fresh produce discounts.",
     
-    // Features
-    secureInvestments: "Secure Investments",
-    secureInvestmentsDesc: "Transparent terms and conditions with guaranteed returns through produce supply.",
-    seasonalStructure: "Seasonal Structure",
-    seasonalStructureDesc: "Three-season annual investment cycle aligned with farming seasons.",
-    hundredPercentOrganic: "100% Organic",
-    organicDesc: "Supporting only certified organic farming practices and sustainable agriculture.",
-    mutualBenefits: "Mutual Benefits",
-    mutualBenefitsDesc: "Investors get returns, farmers get funding, consumers get organic produce.",
+    // Features - Updated to reflect actual business model
+    secureInvestments: "Secure Loan Platform",
+    secureInvestmentsDesc: "Transparent loan terms with guaranteed repayment plus organic produce discount benefits.",
+    seasonalStructure: "Seasonal Loan Support",
+    seasonalStructureDesc: "Comprehensive financial support for farmers throughout their complete crop growing cycle.",
+    hundredPercentOrganic: "100% Organic Focus",
+    organicDesc: "Supporting only certified organic farming practices, ensuring healthy produce for investor benefits.",
+    mutualBenefits: "Win-Win-Win Model",
+    mutualBenefitsDesc: "Investors get healthy organic discounts, farmers get funding, communities get sustainable agriculture.",
     
     // Stats
-    activeFarmers: "Active Farmers",
-    investors: "Investors",
-    fundsDispersed: "Funds Dispersed",
-    repaymentRate: "Repayment Rate",
+    activeFarmers: "Supported Farmers",
+    investors: "Contributing Investors",
+    fundsDispersed: "Loans Distributed",
+    repaymentRate: "Loan Repayment Rate",
     
     // CTA Section
-    readyToStart: "Ready To Get Started?",
-    ctaDescription: "Join our platform today and be part of the sustainable agriculture revolution.",
-    becomeInvestor: "Become An Investor",
+    readyToStart: "Ready To Make A Difference?",
+    ctaDescription: "Join our platform today and support organic farming while enjoying fresh, healthy produce benefits.",
+    becomeInvestor: "Become A Supporting Investor",
     
     // Footer
-    footerDescription: "Connecting investors and farmers for sustainable organic agriculture.",
+    footerDescription: "Connecting wealthy investors with needy organic farmers through innovative loan-to-discount benefits.",
     platform: "Platform",
     forInvestors: "For Investors",
     forFarmers: "For Farmers",
@@ -103,89 +103,134 @@ const translations: Record<Language, Record<string, string>> = {
     privacyPolicy: "Privacy Policy",
     copyright: "© 2024 AgroFina. All rights reserved.",
     
-    // About Page
+    // About Page - Completely updated to reflect business model
     aboutAgroFina: "About AgroFina",
-    aboutDescription: "Learn about our mission to connect investors with organic farmers for sustainable agriculture.",
+    aboutDescription: "Learn about our mission to connect wealthy investors with needy organic farmers through our innovative loan-to-discount platform.",
+    aboutUsTitle: "About AgroFina",
+    aboutUsIntro: "AgroFina is an innovative platform that connects wealthy investors with needy organic farmers through a unique loan-to-discount model, creating sustainable agriculture and healthy returns.",
+    
+    // Core Business Model Explanations
+    inclusiveInvestment: "Inclusive Loan Distribution",
+    inclusiveInvestmentDesc: "Wealthy investors provide loans to needy farmers regardless of farm size, ensuring equal access to funding for sustainable organic agriculture development.",
+    
+    phasedDisbursement: "Seasonal Loan Structure",
+    phasedDisbursementDesc: "Loans are distributed across farming seasons - pre-planting, growing, and harvest phases - ensuring farmers have consistent financial support throughout their crop cycle.",
+    
+    healthyReturns: "Organic Produce Discounts",
+    healthyReturnsDesc: "Instead of traditional interest payments, investors receive substantial discounts on fresh organic produce grown by the farmers they supported, promoting healthy living.",
+    
+    languageAccessibility: "Accessible Platform",
+    languageAccessibilityDesc: "Full support for English and Telugu languages, making our loan-to-discount platform accessible to investors and farmers across different regions.",
+    
+    transparentDashboards: "Transparent Tracking Systems",
+    transparentDashboardsDesc: "Clear dashboards for both investors and farmers to track loan status, crop progress, and organic produce discount benefits.",
+    
+    farmersDashboard: "Farmers' Dashboard",
+    farmersDashboardDesc: "Track loan applications, repayment status, crop progress, and connect with supporting investors.",
+    
+    investorsDashboard: "Investors' Dashboard",
+    investorsDashboardDesc: "Monitor your farmer loans, track crop development, and manage your organic produce discount benefits.",
+    
+    ourMission: "Our Mission",
+    missionStatement: "To create a sustainable ecosystem where wealthy investors support needy organic farmers through loans, receiving healthy organic produce discounts in return, fostering community wellness and agricultural prosperity.",
+    
+    whyChooseUs: "Why Choose Our Platform?",
+    fairDistribution: "Fair Loan Access",
+    responsibleGrowth: "Sustainable Agriculture",
+    realBenefits: "Real Health Benefits", 
+    fullTransparency: "Complete Transparency",
+    
+    equalAccessForAllFarmers: "Equal loan opportunities for farmers of all backgrounds and farm sizes",
+    phasedSustainableDevelopment: "Seasonal financial support promoting sustainable organic farming practices",
+    healthBenefitsOverCash: "Organic produce discounts provide real health benefits instead of cash returns",
+    completeVisibilityTrust: "Full transparency in loan terms, crop progress, and discount benefit calculations",
+    
+    realTimeCropMonitoring: "Real-time crop development tracking",
+    transactionHistory: "Loan and repayment history",
+    profitTracking: "Farming profit and yield tracking",
+    investmentGrowthTracking: "Loan portfolio and farmer support tracking",
+    discountBenefitsOverview: "Organic produce discount benefits overview",
+    portfolioAnalytics: "Farmer loan portfolio analytics",
 
     // Contact Page
     contactUs: "Contact Us",
-    contactDescription: "Get in touch with our team for support, partnerships, or general inquiries.",
+    contactDescription: "Get in touch with our team for support, partnership opportunities, or general inquiries about our loan-to-discount platform.",
 
     // How It Works Page
-    howItWorksDetail: "How It Works",
-    howItWorksDetailDescription: "Detailed explanation of our three-season investment model, farmer funding process, and return structure.",
+    howItWorksDetail: "How Our Loan-To-Discount Model Works",
+    howItWorksDetailDescription: "Detailed explanation of how investors provide loans to farmers and receive organic produce discounts instead of traditional interest.",
 
-    // Farmer Dashboard - All converted to Title Case
+    // Farmer Dashboard - Updated to reflect loan application process
     farmerDashboard: "Farmer Dashboard",
-    farmerDashboardDescription: "Apply for organic farming loans and manage your funding across three seasonal terms.",
-    farmerRegistrationDescription: "Apply for organic farming loans and manage your funding across three seasonal terms.",
-    farmerSuggestedAction: "This farmer interface will include loan applications, funding status tracking, repayment schedules, and seasonal term management. Continue prompting to build out this dashboard!",
-    currentLoan: "Current Loan",
-    activeCrops: "Active Crops",
-    cropHistory: "Previous Crops History", // Updated for data-based display
-    loanHistory: "Previous Loans History", // Updated for data-based display
-    landSize: "Land Size",
-    currentCropStatus: "Current Crop Status",
-    loanManagement: "Loan Management",
-    previousLoans: "Previous Loans", // Will be updated based on user data
-    previousCrops: "Previous Crops", // Will be updated based on user data
-    transactions: "Transactions",
+    farmerDashboardDescription: "Apply for organic farming loans by specifying your crop, land size, and funding requirements.",
+    farmerRegistrationDescription: "Register to apply for farming loans and manage your organic crop cultivation funding.",
+    farmerSuggestedAction: "Apply for loans, track funding status, manage crop development, and connect with your supporting investors through our comprehensive farmer dashboard.",
+    currentLoan: "Active Loan",
+    activeCrops: "Current Crops",
+    cropHistory: "Previous Harvest History",
+    loanHistory: "Previous Loan History", 
+    landSize: "Farm Land Size",
+    currentCropStatus: "Current Crop Development",
+    loanManagement: "Loan Application Management",
+    previousLoans: "Previous Farming Loans",
+    previousCrops: "Previous Crop Yields",
+    transactions: "Financial Transactions",
 
-    // Investor Dashboard - All converted to Title Case
-    investorDashboard: "Investor Dashboard",
-    investorDashboardDescription: "Manage your organic farming investments and track returns",
-    totalInvestment: "Total Investment", // Changed from totalInvested
-    currentValue: "Current Value",
-    totalReturns: "Total Returns", // Will be removed from home page
-    portfolioValue: "Portfolio Value", // Will be removed from home page
-    activeInvestments: "Active Investments",
-    organicProduceValue: "Organic Produce Value",
-    myPortfolio: "My Portfolio",
-    newOpportunities: "New Opportunities",
-    organicBenefits: "Organic Benefits",
-    termsAndConditions: "Terms And Conditions",
-    cropType: "Crop Type",
-    investmentAmount: "Investment Amount",
-    currentSeason: "Current Season",
-    expectedReturn: "Expected Return",
-    progress: "Progress",
-    viewDetails: "View Details",
-    investmentDetails: "Investment Details",
-    completeInformation: "Complete information about your investment in",
-    investmentInformation: "Investment Information",
-    amount: "Amount",
-    duration: "Duration",
-    startDate: "Start Date",
+    // Investor Dashboard - Updated to reflect loan-to-discount model
+    investorDashboard: "Investor Dashboard", 
+    investorDashboardDescription: "Manage your farmer loans and track your organic produce discount benefits",
+    totalInvestment: "Total Farmer Loans",
+    currentValue: "Active Loan Value",
+    totalReturns: "Organic Discount Value",
+    portfolioValue: "Loan Portfolio Value", 
+    activeInvestments: "Supported Farmers",
+    organicProduceValue: "Available Organic Discounts",
+    myPortfolio: "My Farmer Portfolio",
+    newOpportunities: "New Loan Applications",
+    organicBenefits: "Organic Produce Benefits",
+    termsAndConditions: "Loan Terms And Conditions",
+    cropType: "Farmer's Crop Type",
+    investmentAmount: "Loan Amount",
+    currentSeason: "Growing Season",
+    expectedReturn: "Expected Organic Discounts",
+    progress: "Crop Development Progress",
+    viewDetails: "View Farmer Details",
+    investmentDetails: "Loan Details",
+    completeInformation: "Complete information about your loan to",
+    investmentInformation: "Loan Information",
+    amount: "Loan Amount",
+    duration: "Loan Duration",
+    startDate: "Disbursement Date",
     farmerCropDetails: "Farmer And Crop Details",
-    farmer: "Farmer",
-    location: "Location",
-    crop: "Crop",
-    season: "Season",
-    seasonalPaymentSchedule: "Seasonal Payment Schedule",
-    preProductionPayment: "Pre Production Payment",
-    duringProductionPayment: "During Production Payment",
-    postProductionPayment: "Post Production Payment",
-    fundingNeeded: "Funding Needed",
-    description: "Description",
-    investNow: "Invest Now",
-    yourOrganicProduceBenefits: "Your Organic Produce Benefits",
-    enjoyDiscounted: "Enjoy discounted organic produce as part of your investment returns",
-    monthlyQuota: "Monthly Quota",
-    usageThisMonth: "Usage This Month",
-    savingsThisMonth: "Savings This Month",
-    orderNow: "Order Now",
-    importantInformation: "Important information about your investments and returns",
-    investmentStructure: "Investment Structure",
-    returnsRepayment: "Returns And Repayment",
-    riskFactors: "Risk Factors",
-    organicProduceBenefits: "Organic Produce Benefits",
-    downloadCompleteTC: "Download Complete Terms And Conditions Document",
+    farmer: "Supported Farmer",
+    location: "Farm Location",
+    crop: "Organic Crop",
+    season: "Growing Season",
+    seasonalPaymentSchedule: "Seasonal Disbursement Schedule",
+    preProductionPayment: "Pre-Season Disbursement",
+    duringProductionPayment: "Growing Season Support",
+    postProductionPayment: "Harvest Season Support",
+    fundingNeeded: "Loan Amount Needed",
+    description: "Farming Plan Description",
+    investNow: "Provide Loan Now",
+    yourOrganicProduceBenefits: "Your Organic Produce Discount Benefits",
+    enjoyDiscounted: "Enjoy discounted organic produce as returns on your farmer loans",
+    monthlyQuota: "Monthly Discount Quota",
+    usageThisMonth: "Discounts Used This Month",
+    savingsThisMonth: "Savings From Discounts",
+    orderNow: "Order Organic Produce",
+    importantInformation: "Important information about loan terms and organic discount benefits",
+    investmentStructure: "Loan Structure",
+    returnsRepayment: "Repayment And Discount Benefits",
+    riskFactors: "Farming Risk Factors",
+    organicProduceBenefits: "Organic Produce Discount Benefits",
+    downloadCompleteTC: "Download Complete Loan Terms And Conditions",
     active: "Active",
-    inactive: "Inactive",
-    deadline: "Deadline",
-    currentInvestments: "Current Investments",
-    investmentProgress: "Investment Progress",
-    previousTransactions: "Previous Transactions",
+    inactive: "Inactive", 
+    deadline: "Repayment Deadline",
+    currentInvestments: "Current Farmer Loans",
+    investmentProgress: "Crop Development Progress",
+    previousTransactions: "Previous Loan Transactions",
 
     // Login & Registration
     login: "Login",
@@ -207,36 +252,36 @@ const translations: Record<Language, Record<string, string>> = {
     or: "OR",
     otpLogin: "Login With OTP",
 
-    // Farmer Fields - All Title Case
+    // Farmer Fields - Updated to reflect loan application context
     farmerLoginTitle: "Farmer Login",
-    farmerRegistrationTitle: "Farmer Registration",
+    farmerRegistrationTitle: "Farmer Registration - Apply For Loans",
     aadhaarNumber: "Aadhaar Number",
     mobileNumber: "Mobile Number",
     emailOptional: "Email ID (Optional)",
     village: "Village",
-    district: "District",
+    district: "District", 
     state: "State",
-    typeOfFarming: "Type Of Farming",
-    bankAccountDetails: "Bank Account Details",
+    typeOfFarming: "Type Of Organic Farming",
+    bankAccountDetails: "Bank Account Details For Loan Disbursement",
     accountNumber: "Account Number",
     ifscCode: "IFSC Code",
     bankName: "Bank Name",
-    photoIdUpload: "Photo ID Upload",
+    photoIdUpload: "Identity Verification Upload",
     uploadPhotoId: "Upload Aadhaar/PAN/Voter ID",
-    farmPhotos: "Farm Photos (Optional)",
+    farmPhotos: "Farm Photos (For Loan Verification)",
     uploadFarmPhotos: "Upload Farm/Geo-tagged Images",
 
-    // Investor Fields - All Title Case
+    // Investor Fields - Updated to reflect loan provider context
     investorLoginTitle: "Investor Login",
-    investorRegistrationTitle: "Investor Registration",
+    investorRegistrationTitle: "Investor Registration - Provide Farmer Loans",
     panNumber: "PAN Number",
     occupation: "Occupation/Profession",
     preferredLanguage: "Preferred Language",
-    billingAddress: "Billing Address",
-    address: "Address",
+    billingAddress: "Address For Organic Produce Delivery",
+    address: "Delivery Address",
     city: "City",
     pincode: "Pincode",
-    paymentMethod: "Payment Method",
+    paymentMethod: "Preferred Payment Method",
     upiId: "UPI ID",
 
     // Form Actions
@@ -255,64 +300,83 @@ const translations: Record<Language, Record<string, string>> = {
     passwordsDontMatch: "Passwords Don't Match",
 
     // Farming Types
-    vegetables: "Vegetables",
-    grains: "Grains",
-    fruits: "Fruits",
-    cotton: "Cotton",
-    sugarcane: "Sugarcane",
-    mixed: "Mixed Farming",
+    vegetables: "Organic Vegetables",
+    grains: "Organic Grains",
+    fruits: "Organic Fruits",
+    cotton: "Organic Cotton",
+    sugarcane: "Organic Sugarcane",
+    mixed: "Mixed Organic Farming",
 
-    // Additional translations for login forms
+    // Additional translations for loan applications
     personalInformation: "Personal Information",
-    locationDetails: "Location Details",
-    farmingDetails: "Farming Details",
-    documentUpload: "Document Upload",
+    locationDetails: "Farm Location Details",
+    farmingDetails: "Organic Farming Details",
+    documentUpload: "Document Upload For Verification",
     accountSecurity: "Account Security",
     supportedFormats: "Supported Formats",
     multipleFiles: "Multiple Files Supported",
     maxSize: "Max Size",
     chooseFile: "Choose File",
     uploadDocument: "Upload Document",
-    completeRegistrationDetails: "Complete Registration Details",
-    selectFarmingType: "Select Farming Type",
+    completeRegistrationDetails: "Complete Registration To Apply For Loans",
+    selectFarmingType: "Select Organic Farming Type",
 
     // Additional dashboard terms
-    currentlyGrowing: "Currently Growing",
-    noActiveLoans: "No Active Loans",
+    currentlyGrowing: "Currently Growing Organic Crops",
+    noActiveLoans: "No Active Farming Loans",
     activeLoadAmount: "Active Loan Amount",
-    totalLoansHistory: "Total Loans History",
+    totalLoansHistory: "Total Farming Loans History",
     loanApplicationStatus: "Loan Application Status",
-    cropManagement: "Crop Management",
+    cropManagement: "Organic Crop Management",
     weatherConditions: "Weather Conditions",
-    soilHealth: "Soil Health",
+    soilHealth: "Organic Soil Health",
     irrigationStatus: "Irrigation Status",
-    fertilizerSchedule: "Fertilizer Schedule",
-    harvestPrediction: "Harvest Prediction"
+    fertilizerSchedule: "Organic Fertilizer Schedule",
+    harvestPrediction: "Harvest Prediction",
+
+    // Additional loan and farming terms
+    loanApproved: "Loan Approved And Disbursed",
+    cropYieldExpected: "Expected Organic Yield",
+    supportingInvestors: "Supporting Investors",
+    organicCertification: "Organic Certification Status",
+    farmingExperience: "Organic Farming Experience",
+    previousHarvests: "Previous Organic Harvests",
+    loanRepaymentStatus: "Loan Repayment Status",
+    organicProduceQuality: "Organic Produce Quality",
+    investorBenefits: "Investor Discount Benefits",
+    farmToTable: "Farm To Table Organic Supply"
   },
   
-  // Telugu translations (keeping existing structure but updating dashboard terms)
+  // Telugu translations (keeping similar structure but with accurate Telugu translations)
   te: {
     // Navigation
     home: "హోమ్",
-    howItWorks: "ఎలా పని చేస్తుం��ి",
-    about: "గురించి",
+    howItWorks: "ఎలా పని చేస్తుంది",
+    about: "మా గురించి",
     contact: "సంప్రదించండి",
     investorLogin: "పెట్టుబడిదారుల లాగిన్",
     farmerLogin: "రైతుల లాగిన్",
     
-    // Continue with existing Telugu translations but ensure dashboard terms are properly formatted
+    // Updated Telugu translations for the business model
+    sustainableInvestment: "🌱 సేంద్రీయ వ్యవసాయ పెట్టుబడి వేదిక",
+    heroDescription: "ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలపండి. పెట్టుబడిదారులు పంట సాగుకు రుణాలు అందించి, సాంప్రదాయిక వడ్డీకి బదులుగా తాజా సేంద్రీయ ఉత్పత్తులపై తగ్గింపులు పొందుతారు.",
+    
     farmerDashboard: "రైతు డ్యాష్‌బోర్డ్",
     investorDashboard: "పెట్టుబడిదారుల డ్యాష్‌బోర్డ్",
-    currentLoan: "ప్రస్తుత రుణం",
+    farmerDashboardDescription: "మీ పంట, భూమి పరిమాణం మరియు నిధుల అవసరాలను పేర్కొంటూ సేంద్రీయ వ్యవసాయ రుణాలకు దరఖాస్తు చేసుకోండి.",
+    investorDashboardDescription: "మీ రైతు రుణాలను నిర్వహించండి మరియు మీ సేంద్రీయ ఉత్పత్తి తగ్గింపు ప్రయోజనాలను ట్రాక్ చేయండి",
+    
+    currentLoan: "ప్రస్త��త రుణం",
     activeCrops: "ప్రస్తుత పంటలు",
     cropHistory: "మునుపటి పంటల చరిత్ర",
     loanHistory: "మునుపటి రుణాల చరిత్ర",
     profile: "ప్రొఫైల్",
     logout: "లాగ్ అవుట్",
     
-    // Add all other existing Telugu translations with proper formatting
-    // (keeping existing structure but ensuring consistency)
-    // ... rest of Telugu translations remain the same but with proper formatting
+    // Add other Telugu translations following the same pattern
+    aboutUsIntro: "అగ్రోఫైనా అనేది ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో ప్రత్యేకమైన రుణ-నుండి-తగ్గింపు మోడల్ ద్వారా కలిపే వినూత్న వేదిక, స్థిరమైన వ్యవసాయం మరియు ఆరోగ్యకరమైన రిటర్న్‌లను సృష్టిస్తుంది.",
+    
+    // Continue with other key terms in Telugu but maintaining the business model focus
   }
 };
 
