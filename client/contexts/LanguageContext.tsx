@@ -242,6 +242,20 @@ const translations: Record<Language, Record<string, string>> = {
     cultivateOrganicCrops: "Cultivate organic crops and supply fresh produce for investor discount benefits",
     applyForFarmingLoan: "Apply for Farming Loan",
 
+    // Dashboard specific terms
+    noActiveLoan: "No Active Loan",
+    applyForNewLoan: "Apply For New Loan",
+    loanStatus: "Loan Status",
+    purpose: "Purpose",
+    applyForSeasonalLoan: "Apply for a seasonal loan to support your crop cultivation",
+    applyForLoan: "Apply For Loan",
+    noActiveLoans: "No Active Loans",
+    sunlight: "Sunlight",
+    goodExposure: "Good Exposure",
+    temperature: "Temperature",
+    idealRange: "Ideal Range",
+    cropHealth: "Crop Health",
+
     // Farmer Dashboard - Updated to reflect loan application process
     farmerDashboard: "Farmer Dashboard",
     farmerDashboardDescription: "Apply for organic farming loans by specifying your crop, land size, and funding requirements.",
@@ -499,7 +513,7 @@ const translations: Record<Language, Record<string, string>> = {
     organicFarming: " సేంద్రీయ వ్యవసాయంలో",
     harvestHealthyBenefits: "ఆరోగ్యకరమైన ప్రయోజనాలను పొందండి",
     harvestReturns: "ఆరోగ్యకరమైన ప్రయోజనాలను పొందండి",
-    heroDescription: "ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలపండి. పెట్టుబడిదారులు పంట సాగుకు రుణాలు అందించి, సాంప్రదాయిక వడ్డీకి బదులుగా తాజా సేంద్రీయ ఉత్పత్తులపై తగ్గింపులు పొందుతారు.",
+    heroDescription: "ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన��న సేంద్రీయ రైతులతో కలపండి. పెట్టుబడిదారులు పంట సాగుకు రుణాలు అందించి, సాంప్రదాయిక వడ్డీకి బదులుగా తాజా సేంద్రీయ ఉత్పత్తులపై తగ్గింపులు పొందుతారు.",
     startInvesting: "పెట్టుబడి ప్రారంభించండి",
     applyForFunding: "రుణానికి దరఖాస్తు చేయండి",
     
@@ -509,14 +523,14 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Investment Process
     investmentProcess: "1. పెట్టుబడి ప్రక్రియ",
-    investmentProcessDescription: "ధనవంతులైన పెట్టుబడిదారులు మా సురక్షిత వేదిక ద్వారా అవసరంలో ఉన్న రైతులకు రుణాలు అందిస్తారు, సేంద్రీయ వ్యవసాయ అభివృద్ధికి మద్దతు ఇస్తారు.",
+    investmentProcessDescription: "ధనవంతులైన పెట్టుబడిదారులు మా సురక్షిత వేదిక ద్��ారా అవసరంలో ఉన్న రైతులకు రుణాలు అందిస్తారు, సేంద్రీయ వ్యవసాయ అభివృద్ధికి మద్దతు ఇస్తారు.",
     threeSeasonalTerms: "కాలానుగుణ రుణ పంపిణీ",
     preduringpost: "కోతకు ముందు, సమయంలో మరియు తరువాత మద్దతు",
     transparentTC: "పారదర్శక రుణ నిబంధనలు మరియు సేంద్రీయ తగ్గింపు ప్రయోజనాలు",
     
     // Farmer Support
     farmerSupport: "2. రైతు మద్దతు",
-    farmerSupportDescription: "అవసరంలో ఉన్న రైతులు వారి పంట రకం, భూమి పరిమాణం మరియు అవసరమైన నిధుల మొత్తాన్ని పేర్కొంటూ సేంద్రీయ సాగుకు రుణాల��ు దరఖాస్తు చేసుకుంటారు.",
+    farmerSupportDescription: "అవసరంలో ఉన్న రైతులు వారి పంట రకం, భూమి పరిమాణం మరియు అవసరమైన నిధుల మొత్తాన్ని పేర్కొంటూ సేంద్రీయ సాగుకు రుణాలకు దరఖాస్తు చేసుకుంటారు.",
     preProductionFunding: "కాలానుకూల రుణ విడుదల",
     duringProductionSupport: "పెరుగుట కాలంలో ఆర్థిక మద్దతు",
     postProductionAssistance: "కోత కాలంలో సహాయం",
@@ -532,23 +546,23 @@ const translations: Record<Language, Record<string, string>> = {
     aboutAgroFina: "అగ్రోఫైనా గురించి",
     aboutDescription: "స్థిరమైన వ్యవసాయం కోసం ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలిపే మా మిషన్ గురించి తెలుసుకోండి.",
     aboutUsTitle: "అగ్రోఫైనా గురించి",
-    aboutUsIntro: "అగ్రోఫైనా అనేది ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో ప్రత్యేకమైన రుణ-నుండి-తగ్గింపు మోడల్ ద్వారా కలిపే వినూత్న వేదిక, స్థిరమైన వ్యవసాయం మరియు ఆరోగ్యకరమైన రిటర్న్‌లను సృష్టిస్తుంది.",
+    aboutUsIntro: "అగ్రోఫైనా అనేది ధనవంతులైన పె��్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో ప్రత్యేకమైన రుణ-నుండి-తగ్గింపు మోడల్ ద్వారా కలిపే వినూత్న వేదిక, స్థిరమైన వ్యవసాయం మరియు ఆరోగ్యకరమైన రిటర్న్‌లను సృష్టిస్తుంది.",
     
     // Core Features
     inclusiveInvestment: "సమన్వితమైన రుణ పంపిణీ",
-    inclusiveInvestmentDesc: "ధనవంతులైన పెట్టుబడిదారులు వ్యవసాయ పరిమాణంతో సంబంధం లేకుండా అవసరంలో ఉన్న ర��తులకు రుణాలు అందిస్తారు, స్థిరమైన సేంద్రీయ వ్యవసాయ అభివృద్ధికి సమాన ప్రాప్యతను నిర్ధారిస్తారు.",
+    inclusiveInvestmentDesc: "ధనవంతులైన పెట్టుబడిదారులు వ్యవసాయ పరిమాణంతో సంబంధం లేకుండా అవసరంలో ఉన్న రైతులకు రుణాలు అందిస్తారు, స్థిరమైన సేంద్రీయ వ్యవసాయ అభివృద్ధికి సమాన ప్రాప్యతను నిర్ధారిస్తారు.",
     phasedDisbursement: "కాలానుగుణ రుణ నిర్మాణం",
     phasedDisbursementDesc: "రుణాలు వ్యవసాయ కాలాలలో - నాటడానికి ముందు, పెరుగుట మరియు కోత దశలలో - పంపిణీ చేయబడతాయి, రైతులకు వారి పంట చక్రంలో స్థిరమైన ఆర్థిక మద్దతును నిర్ధారిస్తుంది.",
     healthyReturns: "సేంద్రీయ ఉత్పత్తి తగ్గింపులు",
-    healthyReturnsDesc: "సాంప్రదాయిక వడ్డీ చెల్లింపులకు బదులుగా, పెట్టుబడిదారులు వారు మద్దతు చేసిన రైతులు పెంచిన తాజా సేంద్రీయ ఉత్పత్తులపై గణనీయమైన తగ్గింపులు పొందుతారు, ఆరోగ��యకరమైన జీవనాన్ని ప్రోత్సహిస్తుంది.",
+    healthyReturnsDesc: "సాంప్రదాయిక వడ్డీ చెల్లింపులకు బదులుగా, పెట్టుబడిదారులు వారు మద్దతు చేసిన రైతులు పెంచిన తాజా సేంద్రీయ ఉత్పత్తులపై గణనీయమైన తగ్గింపులు పొందుతారు, ఆరోగ్యకరమైన జీవనాన్ని ప్రోత్సహిస్తుంది.",
     languageAccessibility: "అందుబాటులో ఉన్న వేదిక",
-    languageAccessibilityDesc: "ఇంగ్లీష్ మరియు తెలుగు భాషలకు పూర్తి మద్దతు, మా రుణ-నుండి-తగ్గింపు వేదికను వివిధ ప్రాంతాలలోని పెట్టుబడిదారులు మరియు రైతులకు అందుబాటులో ఉంచుతుంది.",
+    languageAccessibilityDesc: "ఇంగ్లీష్ మరియు తెలుగు భాషలకు పూర్తి మద్దతు, మా రుణ-నుండి-తగ్గింపు వేదికను వివిధ ప్రాంతాలలోని పెట్టుబడిదా��ులు మరియు రైతులకు అందుబాటులో ఉంచుతుంది.",
     
     // Dashboard Features
     transparentDashboards: "పారదర్శక ట్రాకింగ్ వ్యవస్థలు",
     transparentDashboardsDesc: "రుణ స్థితి, పంట ప్రగతి మరియు సేంద్రీయ ఉత్పత్తి తగ్గింపు ప్రయోజనాలను ట్రాక్ చేయడానికి పెట్టుబడిదారులు మరియు రైతుల కోసం స్పష్టమైన డ్యాష్‌బోర్డ్‌లు.",
     farmersDashboard: "రైతుల డ్యాష్‌బోర్డ్",
-    farmersDashboardDesc: "రుణ దరఖా���్తులు, తిరిగి చెల్లింపు స్థితి, పంట ప్రగతిని ట్రాక్ చేయండి మరియు మద్దతు చేసే పెట్టుబడిద���రులతో కనెక్ట్ అవండి.",
+    farmersDashboardDesc: "రుణ దరఖాస్తులు, తిరిగి చెల్లింపు స్థితి, పంట ప్రగతిని ట్రాక్ చేయండి మరియు మద్దతు చేసే పెట్టుబడిదారులతో కనెక్ట్ అవండి.",
     investorsDashboard: "పెట్టుబడిదారుల డ్యాష్‌బోర్డ్",
     investorsDashboardDesc: "మీ రైతు రుణాలను పర్యవేక్షించండి, పంట అభివృద్ధిని ట్రాక్ చేయండి మరియు మీ సేంద్రీయ ఉత్పత్తి తగ్గింపు ప్రయోజనాలను నిర్వహించండి.",
     
@@ -566,10 +580,10 @@ const translations: Record<Language, Record<string, string>> = {
     equalAccessForAllFarmers: "అన్ని నేపథ్యాలు మరియు వ్యవసాయ పరిమాణాల రైతులకు సమాన రుణ అవకాశాలు",
     phasedSustainableDevelopment: "స్థిరమైన సేంద్రీయ వ్యవసాయ పద్ధతులను ప్రోత్సహించే కాలానుగుణ ఆర్థిక మద్దతు",
     healthBenefitsOverCash: "సేంద్రీయ ఉత్పత్తి తగ్గింపులు నగదు రిటర్న్‌లకు బదులుగా నిజమైన ఆరోగ్య ప్రయోజనాలను అందిస్తాయి",
-    completeVisibilityTrust: "రుణ నిబంధనలు, పంట ప్రగతి మరియు తగ్గింపు ప్రయోజన ల��క్కల్లో పూర్ణ పారదర్శకత",
+    completeVisibilityTrust: "రుణ నిబంధనలు, పంట ప్రగతి మరియు తగ్గింపు ప్రయోజన లెక్కల్లో పూర్ణ పారదర్శకత",
     
     realTimeCropMonitoring: "నిజ-సమయ పంట అభివృద్ధి ట్రాకింగ్",
-    transactionHistory: "రుణ మరియు తిరిగి చెల్లింపు చరిత్ర",
+    transactionHistory: "రుణ మరియు తిరిగి చెల్��ింపు చరిత్ర",
     profitTracking: "వ్యవసాయ లాభం మరియు దిగుబడి ట్రాకింగ్",
     investmentGrowthTracking: "రుణ పోర్ట్‌ఫోలియో మరియు రైతు మద్దతు ట్రాకింగ్",
     discountBenefitsOverview: "సేంద్రీయ ఉత్పత్తి తగ్గింపు ప్రయోజనాల అవలోకనం",
@@ -578,8 +592,8 @@ const translations: Record<Language, Record<string, string>> = {
     // Contact Page
     contactUs: "మాతో సంప్రదించండి",
     contactDescription: "మా రుణ-నుండి-తగ్గింపు వేదిక గురించి మద్దతు, భాగస్వామ్య అవకాశాలు లేదా సాధారణ విచారణల కోసం మా బృందంతో సంప్రదించండి.",
-    getInTouch: "���ాతో సంప్రదించండి",
-    contactUsDescription: "మా రుణ-నుండి-తగ్గింపు వేదిక గురించి మద్దతు, భాగస్వామ్య అవకాశాలు లేదా సాధారణ విచారణల కోసం మా బృందంతో సంప్రదించండి.",
+    getInTouch: "మాతో సంప్రదించండి",
+    contactUsDescription: "మా రుణ-నుండి-తగ్గింపు వేదిక గురించి మద్దతు, భాగస్వామ్య అవకాశాలు లేదా సాధార��� విచారణల కోసం మా బృందంతో సంప్రదించండి.",
     contactInfo: "సంప్రదింపు సమాచారం",
     ourOffice: "ఈ క్రింది పద్ధతుల్లో దేనిలోనైనా మాను సంప్రదించండి",
     companyAddress: "123 గ్రీన్ వ్యాలీ రోడ్\nఆర్గానిక్ డిస్ట్రిక్ట్, హైదరాబాద్\nతెలంగాణ, భారతదేశం - 500001",
@@ -589,7 +603,7 @@ const translations: Record<Language, Record<string, string>> = {
     contactForm: "దిగువ ఫారమ్ పూరించండి మరియు మేము వీలైనంత త్వరగా మీకు తిరిగి సందేశం పంపుతాము",
     name: "పేరు",
     message: "సందేశం",
-    sending: "���ంపుతున్నాము...",
+    sending: "పంపుతున్నాము...",
     sendButton: "సందేశం పంపండి",
     successMessage: "ధన్యవాదాలు! మీ సందేశం విజయవంతంగా పంపబడింది.",
     errorMessage: "క్షమించండి, మీ సందేశం పంపడంలో లోపం జరిగింది. దయచేసి మళ్లీ ప్రయత్నించండి.",
@@ -607,7 +621,7 @@ const translations: Record<Language, Record<string, string>> = {
     provideLoanWithoutInterest: "సాంప్రదాయిక వడ్డీ లేకుండా రుణం అందించండి",
     trackFarmerProgress: "రైతు మరియు పంట పురోగతిని ట్రాక్ చేయండి",
     farmerGrowsOrganicCrops: "రైతు సేంద్రీయ పంటలు పెంచుతాడు",
-    farmerGrowsDesc: "అవసరంలో ఉన్న రైతులు రుణాన్ని ఉపయోగించి సేంద్రీయ పంటలను సాగు చేస్తారు, నాణ్యత మరియు స్థిరమైన వ్యవసాయ పద్ధతులపై దృష్టి సారిస్తారు",
+    farmerGrowsDesc: "అవసరంలో ఉన్న రైతులు రుణాన్ని ఉపయోగించి సే��ద్రీయ పంటలను సాగు చేస్తారు, నాణ్యత మరియు స్థిరమైన వ్యవసాయ పద్ధతులపై దృష్టి సారిస్తారు",
     purchaseOrganicSeeds: "సేంద్రీయ విత్తనాలు మరియు సామగ్రిని కొనండి",
     maintainOrganicStandards: "ధృవీకృత సేంద్రీయ ప్రమాణాలను నిర్వహించండి",
     regularCropUpdates: "రెగ్యులర్ పంట పురోగతి అప్‌డేట్‌లు",
@@ -623,13 +637,13 @@ const translations: Record<Language, Record<string, string>> = {
     forWealthyInvestors: "ధనవంతులైన పెట్టుబడిదారుల కోసం",
     supportNeedyFarmers: "మీ కుటుంబానికి అర్ధవంతమైన ఆరోగ్య ప్రయోజనాలు పొందుతూ అవసరంలో ఉన్న రైతులను మద్దతు చేయండి",
     socialImpact: "సామాజిక ప్రభావం",
-    directlyHelpFamilies: "అవసరంలో ఉన్న వ్యవసాయ కుటుంబాలకు స్థిరమైన జీవనోపాధిని నిర్మించడంలో ప్రత్యక్షంగా సహాయం చేయండి",
+    directlyHelpFamilies: "అవసరంలో ఉన్న వ్యవసాయ కుటుంబాలకు స్థిరమైన జీవనోపాధిని నిర���మించడంలో ప్రత్యక్షంగా సహాయం చేయండి",
     healthBenefits: "ఆరోగ్య ప్రయోజనాలు",
     accessPremiumOrganic: "మీ కుటుంబానికి తగ్గింపు రేట్లలో ప్రీమియం సేంద్రీయ ఉత్పత్తులకు ప్రాప్యత",
     realReturns: "నిజమైన రిటర్న్‌లు",
     valueEquivalentReturns: "సేంద్రీయ ఆహార ఆదా ద్వారా సాంప్రదాయిక రిటర్న్‌లకు సమానమైన విలువను పొందండి",
     transparency: "పారదర్శకత",
-    trackSupportedFarmers: "మీరు మద్దత��� చేసిన రైతులు మరియు పంట పురోగతిని నిజ-సమయంలో ట్రాక్ చేయండి",
+    trackSupportedFarmers: "మీరు మద్దతు చేసిన రైతులు మరియు పంట పురోగతిని నిజ-సమయంలో ట్రాక్ చేయండి",
     forNeedyFarmers: "అవసరంలో ఉన్న రైతుల కోసం",
     accessFundingWithoutEMI: "సంక్లిష్టమైన EMI నిర్మాణాలు లేకుండా నిధులను పొందండి మరియు స్థిరమైన సేంద్రీయ వ్యవసాయ వ్యాపారాలను నిర్మించండి",
     easyFundingAccess: "సులభ నిధుల ప్రాప్యత",
@@ -639,7 +653,7 @@ const translations: Record<Language, Record<string, string>> = {
     investorConnection: "పెట్టుబడిదారుల కనెక్షన్",
     buildRelationships: "మీ విజయం గురించి శ్రద్ధ వహించే మద్దతు చేసే పెట్టుబడిదారులతో సంబంధాలను నిర్మించండి",
     organicPremium: "సేంద్రీయ ప్రీమియం",
-    betterPricesOrganic: "సేంద్రీయ ఉత్పత్తులకు మెరుగైన ధరలు పొందండి మరియు స్థిరమైన వ్యవసాయ పద్ధతులను నిర్మించండి",
+    betterPricesOrganic: "సేంద్రీయ ఉత్పత్తులకు మెరుగైన ధరలు పొందండి మరియు స్థిరమై��� వ్యవసాయ పద్ధతులను నిర్మించండి",
     howToGetStarted: "ఎలా ప్రారంభించాలి",
     simpleRegistrationProcess: "పెట్టుబడిదారులు మరియు రైతుల కోసం సరళమైన రిజిస్ట్రేషన్ ప్రక్రియ",
     forInvestors: "పెట్టుబడిదారుల కోసం",
@@ -648,20 +662,20 @@ const translations: Record<Language, Record<string, string>> = {
     browseFarmerApplications: "రైతుల దరఖాస్తులను బ్రౌజ్ చేయండి",
     reviewLoanRequests: "వారి పంట ప్రణాళికలు మరియు నిధుల అవసరాలతో అవసరంలో ఉన్న రైతుల నుండి రుణ అభ్యర్థనలను సమీక్షించండి",
     provideLoans: "రుణాలు అందించండి",
-    selectFarmersSupport: "మద్దతు చేయడానికి రైతులను ఎంచుకోండి మరియు మా సురక్షిత వేదిక ద్వారా రుణాలు అందించండి",
+    selectFarmersSupport: "మద్���తు చేయడానికి రైతులను ఎంచుకోండి మరియు మా సురక్షిత వేదిక ద్వారా రుణాలు అందించండి",
     enjoyOrganicBenefits: "సేంద్రీయ ప్రయోజనాలను ఆస్వాదించండి",
     receiveDiscountsTrack: "సేంద్రీయ ఉత్పత్తి తగ్గింపులు పొందండి మరియు మీరు మద్దతు చేసిన రైతుల నుండి పంట పురోగతిని ట్రాక్ చేయండి",
     startSupportingFarmers: "రైతులను మద్దతు చేయడం ప్రారంభించండి",
-    forFarmers: "రైతుల కోస���",
+    forFarmers: "రైతుల కోసం",
     registerYourFarm: "మీ వ్యవసాయాన్ని నమోదు చేసుకోండి",
-    provideDetailsFarmer: "ఆధార్, వ్యవసాయ ప్రాంత���, భూమి పరిమాణం మరియు వ్యవసాయ రకంతో సహా మీ వివరాలను అందించండి",
+    provideDetailsFarmer: "ఆధార్, వ్యవసాయ ప్రాంతం, భూమి పరిమాణం మరియు వ్యవసాయ రకంతో సహా మీ వివరాలను అందించండి",
     submitLoanApplication: "రుణ దరఖాస్తును సమర్పించండి",
     specifyCropRequirements: "వ్యవసాయ ప్రణాళికతో మీ పంట రకం, భూమి ప్రాంతం మరియు అవసరమైన రుణ మొత్తాన్ని పేర్కొనండి",
     receiveFunding: "నిధులు పొందండి",
     getLoanApproval: "మా వేదిక ద్వారా మద్దతు చేసే పెట్టుబడిదారుల నుండి రుణ ఆమోదం మరియు నిధులు పొందండి",
     growAndSupply: "పెంచండి & సరఫరా చేయండి",
     cultivateOrganicCrops: "సేంద్రీయ పంటలను సాగు చేసి పెట్టుబడిదారుల తగ్గింపు ప్రయోజనాల కోసం తాజా ఉత్పత్తులను సరఫరా చేయండি",
-    applyForFarmingLoan: "వ్యవసాయ రుణానికి దరఖాస్తు చేయండ��",
+    applyForFarmingLoan: "వ్యవసాయ రుణానికి దరఖాస్తు చేయండి",
     
     // Farmer Dashboard - Telugu translations for updated labels
     farmerDashboard: "రైతు డ్యాష్‌బోర్డ్",
@@ -679,7 +693,7 @@ const translations: Record<Language, Record<string, string>> = {
     welcomeBack: "తిరిగి స్వాగతం",
     
     // Investor Dashboard - Telugu translations for updated labels
-    investorDashboard: "పెట్టుబడిదారుల డ్యాష్‌బోర్���్",
+    investorDashboard: "పెట్టుబడిదారుల డ్యాష్‌బోర్డ్",
     investorDashboardDescription: "మీ రైతు రుణాలను నిర్వహించండి మరియు మీ సేంద్రీయ ఉత్పత్తి తగ్గింపు ప్రయోజనాలను ట్రాక్ చేయండి",
     totalInvestment: "మొత్తం రైతు రుణాలు",
     activeInvestments: "మద్దతు పొందిన రైతులు",
@@ -712,7 +726,7 @@ const translations: Record<Language, Record<string, string>> = {
     approvedAndDisbursed: "ఆమోదించబడింది & విడుదల చేయబడింది",
     organicVegetableFarming: "సేంద్రీయ కూరగాయల వ్యవసాయం",
     applicationDate: "దరఖాస్తు తేదీ",
-    todaysFarmInsights: "నేటి వ్యవసాయ అంతర్దృష్ట��లు",
+    todaysFarmInsights: "నేటి వ్యవసాయ అంతర్దృష్టులు",
     soilMoisture: "మట్టి తేమ",
     optimalLevel: "అనుకూల స్థాయి",
     
@@ -740,7 +754,7 @@ const translations: Record<Language, Record<string, string>> = {
     district: "జిల్లా",
     state: "రాష్ట్రం",
     typeOfFarming: "సేంద్రీయ వ్యవసాయ రకం",
-    bankAccountDetails: "బ్యా��క్ ఖాతా వివరాలు",
+    bankAccountDetails: "బ్యాంక్ ఖాతా వివరాలు",
     accountNumber: "ఖాతా నంబర్",
     ifscCode: "IFSC కోడ్",
     bankName: "బ్యాంక్ పేరు",
@@ -769,7 +783,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Demo Credentials
     demoAccounts: "డెమో ఖాతాలు",
     testing: "టెస్టింగ్",
-    useTheseDemo: "వేది���ను అన్వేషించడానికి ఈ డెమో ఖాతాలను ఉపయోగించండి",
+    useTheseDemo: "వేదికను అన్వేషించడానికి ఈ డెమో ఖాతాలను ఉపయోగించండి",
     totalInvestment: "మొత్తం పెట్టుబడి",
     land: "భూమి",
     useAccount: "ఖాతాను ఉపయోగించండి",
@@ -788,24 +802,24 @@ const translations: Record<Language, Record<string, string>> = {
     copyright: "© 2024 అగ్రోఫైనా. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.",
     
     // Testimonials
-    whatOurUsersAreSaying: "మా సమాజం ఏమ�� చెబుతోంది",
+    whatOurUsersAreSaying: "మా సమాజం ఏమి చెబుతోంది",
     testimonialsDescription: "రుణాలు అందించే పెట్టుబడిదారులు మరియు మద్దతు పొందే రైతుల నుండి నిజమైన అనుభవాలు",
-    organicFarmer: "సేంద్రీయ రైతు",
+    organicFarmer: "సే���ద్రీయ రైతు",
     investorFromMumbai: "ముంబై నుండి రుణ అందించేవారు",
     investorFromHyderabad: "హైదరాబాద్ నుండి మద్దతు చేసే పెట్టుబడిదారు",
     testimonial1Text: "అగ్రోఫైనా ద్వారా సేంద్రీయ రైతులకు రుణాలు అందించడం చాలా బహుమతిగా ఉంది. నగదు రిటర్న్స్‌కు బదులుగా, నా కుటుంబం ఇష్టపడే తాజా సేంద్రీయ ఉత్పత్తులపై అద్భుతమైన తగ్గింపులు పొందుతున్నాను. ఇది ఉద్దేశ్యంతో పెట్టుబడి పెట్టడం!",
-    testimonial2Text: "అగ్రోఫైనా ద్వారా రుణం పొందడం నా వ్యవసాయా��్ని మార్చేసింది. సంక్లిష్టమైన EMI ఒత్తిడి లేదు - కేవలం నాణ్యమైన సేంద్రీయ పంటలు పెంచడంపై దృష్టి. నా మద్దతు చేసే పెట్టుబడిదారులు నా వ్యవసాయాన్ని సందర్శించి ఉత్పత్తి నాణ్యతను మెచ్చుకుంటారు!",
+    testimonial2Text: "అగ్రోఫైనా ద్వారా రుణం పొందడం నా వ్యవసాయాన్ని మార్చేసింది. సంక్లిష్టమైన EMI ఒత్తిడి లేదు - కేవలం నాణ్యమైన సేంద్రీయ పంటలు పెంచడంపై దృష్టి. నా మద్దతు చేసే పెట్టుబడిదారులు నా వ్యవసాయాన్ని సందర్శించి ఉత్పత్తి నాణ్యతను మెచ్చుకుంటారు!",
     testimonial3Text: "అవసరంలో ఉన్న రైతులను మద్దతు చేస్తూ ఆరోగ్యకరమైన సేంద్రీయ కూరగాయలు మరియు పండ్లపై గణనీయమైన తగ్గింపులు పొందడం నాకు ఇష్టం. నా పెట్టుబడి కుటుంబాలకు సహాయపడుతుంది మరియు నా స్వంత కుటుంబాన్ని ఆరోగ్యంగా ఉంచుతుంది. పర్ఫెక్ట్ విన్-విన్ మోడల్!",
     testimonial1Name: "రాజేష్ కుమార్",
     testimonial2Name: "ప్రియా రెడ్డి",
-    testimonial3Name: "అమిత్ పటేల��",
+    testimonial3Name: "అమిత్ పటేల్",
     
     // Contact page additional terms
     phone: "ఫోన్",
     email: "ఇమెయిల్",
     address: "చిరునామా",
     workingHours: "పని గంటలు",
-    hoursInfo: "సోమవారం - శుక్రవారం: ఉదయం 9:00 - సాయంత్రం 6:00"
+    hoursInfo: "సోమవారం - శుక్రవారం: ఉదయం 9:00 - సా��ంత్రం 6:00"
   }
 };
 
