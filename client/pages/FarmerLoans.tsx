@@ -114,7 +114,6 @@ export default function FarmerLoans() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <DashboardNavigation />
       
       <div className="max-w-7xl mx-auto p-6">
         {/* Header */}
