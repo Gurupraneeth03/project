@@ -144,9 +144,9 @@ export default function HowItWorks() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why This Model Works</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('whyThisModelWorks')}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our innovative approach creates value for all stakeholders while promoting sustainable organic agriculture
+              {t('innovativeApproach')}
             </p>
           </div>
 
@@ -157,38 +157,38 @@ export default function HowItWorks() {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-2xl">For Wealthy Investors</CardTitle>
+                <CardTitle className="text-2xl">{t('forWealthyInvestors')}</CardTitle>
                 <CardDescription className="text-lg">
-                  Support needy farmers while getting meaningful health benefits for your family
+                  {t('supportNeedyFarmers')}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <Heart className="h-5 w-5 text-primary mt-0.5" />
                   <div>
-                    <h4 className="font-semibold">Social Impact</h4>
-                    <p className="text-sm text-gray-600">Directly help needy farming families build sustainable livelihoods</p>
+                    <h4 className="font-semibold">{t('socialImpact')}</h4>
+                    <p className="text-sm text-gray-600">{t('directlyHelpFamilies')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Leaf className="h-5 w-5 text-primary mt-0.5" />
                   <div>
-                    <h4 className="font-semibold">Health Benefits</h4>
-                    <p className="text-sm text-gray-600">Access to premium organic produce at discounted rates for your family</p>
+                    <h4 className="font-semibold">{t('healthBenefits')}</h4>
+                    <p className="text-sm text-gray-600">{t('accessPremiumOrganic')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <TrendingUp className="h-5 w-5 text-primary mt-0.5" />
                   <div>
-                    <h4 className="font-semibold">Real Returns</h4>
-                    <p className="text-sm text-gray-600">Get value equivalent to traditional returns through organic food savings</p>
+                    <h4 className="font-semibold">{t('realReturns')}</h4>
+                    <p className="text-sm text-gray-600">{t('valueEquivalentReturns')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <FileText className="h-5 w-5 text-primary mt-0.5" />
                   <div>
-                    <h4 className="font-semibold">Transparency</h4>
-                    <p className="text-sm text-gray-600">Track your supported farmers and crop progress in real-time</p>
+                    <h4 className="font-semibold">{t('transparency')}</h4>
+                    <p className="text-sm text-gray-600">{t('trackSupportedFarmers')}</p>
                   </div>
                 </div>
               </CardContent>
@@ -200,9 +200,9 @@ export default function HowItWorks() {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
                   <Sprout className="h-8 w-8 text-green-600" />
                 </div>
-                <CardTitle className="text-2xl">For Needy Farmers</CardTitle>
+                <CardTitle className="text-2xl">{t('forNeedyFarmers')}</CardTitle>
                 <CardDescription className="text-lg">
-                  Access funding without complex EMI structures and build sustainable organic farming businesses
+                  {t('accessFundingWithoutEMI')}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
