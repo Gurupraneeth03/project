@@ -107,9 +107,7 @@ export default function FarmerCrops() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      
-      <div className="max-w-7xl mx-auto p-6">
+    <div className="max-w-7xl mx-auto p-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
@@ -352,7 +350,6 @@ export default function FarmerCrops() {
             </div>
           </CardContent>
         </Card>
-      </div>
     </div>
   );
 }
