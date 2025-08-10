@@ -65,7 +65,7 @@ export default function FarmerLogin() {
         login(response.user);
         navigate('/farmer-dashboard');
       } else {
-        setError(response.error || "Login failed");
+        setError(response.error || t('loginFailed'));
       }
     } catch (err) {
       setError("An unexpected error occurred");
