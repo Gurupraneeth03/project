@@ -59,12 +59,12 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
                 <p className="text-xs text-gray-600">{account.location}</p>
                 {userType === 'investor' && (
                   <p className="text-xs text-green-600 font-medium">
-                    Total Investment: {(account as any).investment}
+                    {t('totalInvestment')}: {(account as any).investment}
                   </p>
                 )}
                 {userType === 'farmer' && (
                   <p className="text-xs text-green-600 font-medium">
-                    Land: {(account as any).landSize}
+                    {t('land')}: {(account as any).landSize}
                   </p>
                 )}
               </div>
