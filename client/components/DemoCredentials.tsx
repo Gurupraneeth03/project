@@ -23,13 +23,6 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
       password: 'investor123',
       location: 'Hyderabad, Telangana',
       investment: '₹2,50,000'
-    },
-    {
-      name: 'Rajesh Varma',
-      email: 'rajesh.varma@gmail.com',
-      password: 'investor456',
-      location: 'Hyderabad, Telangana',
-      investment: '₹1,80,000'
     }
   ];
 
