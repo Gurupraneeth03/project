@@ -352,7 +352,7 @@ const translations: Record<Language, Record<string, string>> = {
     testimonialsDescription: "Real experiences from investors providing loans and farmers receiving support",
     organicFarmer: "Organic Farmer",
     investorFromMumbai: "Loan Provider from Mumbai",
-    investorFromHyderabad: "Supporting Investor from Hyderabad",
+    investorFromHyderabad: "Supporting Investor from Hyderabad", 
     testimonial1Text: "Providing loans to organic farmers through AgroFina has been incredibly rewarding. Instead of cash returns, I receive amazing discounts on fresh organic produce that my family loves. It's investing with a purpose!",
     testimonial2Text: "Getting a loan through AgroFina transformed my farming. No complex EMI pressure - just focus on growing quality organic crops. My supporting investors even visit my farm and appreciate the produce quality!",
     testimonial3Text: "I love supporting needy farmers while getting substantial discounts on the healthiest organic vegetables and fruits. My investment helps families while keeping my own family healthy. Perfect win-win model!",
@@ -362,42 +362,158 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Contact page additional terms
     phone: "Phone",
-    email: "Email",
+    email: "Email", 
     address: "Address",
     workingHours: "Working Hours",
     hoursInfo: "Monday - Friday: 9:00 AM - 6:00 PM"
   },
   
-  // Telugu translations (keeping similar structure but with accurate Telugu translations)
+  // Telugu translations - Comprehensive coverage for all dashboard and application content
   te: {
     // Navigation
     home: "హోమ్",
     howItWorks: "ఎలా పని చేస్తుంది",
     about: "మా గురించి",
-    contact: "సంప్రదించండి",
+    contact: "మాతో సంప్రదించండి",
     investorLogin: "పెట్టుబడిదారుల లాగిన్",
     farmerLogin: "రైతుల లాగిన్",
     
-    // Updated Telugu translations for the business model
-    sustainableInvestment: "🌱 సేంద్రీయ వ్యవసాయ పెట్టుబడి వేదిక",
-    heroDescription: "ధనవంతులై�� పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలపండి. పెట్టుబడిదారులు పంట సాగుకు రుణాలు అందించి, సాంప్రదాయిక వడ్డీకి బదులుగా తాజా సేంద్రీయ ఉత్పత్తులపై తగ్గింపులు పొందుతారు.",
+    // Hero Section
+    sustainableInvestment: "🌱 సేంద్రీయ వ్యవసాయ పెట్టు��డి వేదిక",
+    investIn: "పెట్టుబడి పెట్టండి",
+    organicFarming: " సేంద్రీయ వ్యవసాయంలో",
+    harvestReturns: "ఆరోగ్యకరమైన ప్రయోజనాలను పొందండి",
+    heroDescription: "ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలపండి. పెట్టుబడిదారులు పంట సాగుకు రుణాలు అందించి, సాంప్రదాయిక వడ్డీకి బదులుగా తాజా సేంద్రీయ ఉత్పత్తులపై తగ్గింపులు పొందుతారు.",
+    startInvesting: "పెట్టుబడి ప్రారంభించండి",
+    applyForFunding: "రుణానికి దరఖాస్తు చేయండి",
     
-    farmerDashboard: "రైతు డ్యాష్‌బోర్డ్",
-    investorDashboard: "పెట్టుబడిదారుల డ్యాష్‌బోర్డ్",
-    farmerDashboardDescription: "మీ పంట, భూమి పరిమాణం మరియు నిధుల అవస���ాలను పేర్కొంటూ సేంద్రీయ వ్యవసాయ రుణాలకు దరఖాస్తు చేసుకోండి.",
-    investorDashboardDescription: "మీ రైతు రుణాలను నిర్వహించండి మరియు మీ సేంద్రీయ ఉత్పత్తి తగ్గింపు ప్రయోజనాలను ట్రాక్ చేయండి",
+    // How It Works Section
+    howAgroFinaWorks: "అగ్రోఫైనా ఎలా పని చేస్తుంది",
+    howItWorksDescription: "మా వేదిక ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న రైతులత�� వినూత్న రుణ-నుండి-తగ్గింపు మోడల్ ద్వారా కలుపుతుంది.",
     
+    // About page
+    aboutAgroFina: "అగ్రోఫైనా గురించి",
+    aboutDescription: "స్థిరమైన వ్యవసాయం కోసం ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలిపే మా మిషన్ గురించి తెలుసుకోండి.",
+    aboutUsTitle: "అగ్రోఫైనా గురించి",
+    aboutUsIntro: "అగ్రోఫైనా అనేది ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో ప్రత్యేకమైన రుణ-నుండి-తగ్గింపు మోడల్ ద్వారా కలిపే వినూత్న వేదిక, స్థిరమైన వ్యవసాయం మరియు ఆరోగ్యకరమైన రిటర్న్‌లను సృష్టిస్తుంది.",
+    
+    // Farmer Dashboard - Telugu translations for updated labels
+    farmerDashboard: "రై��ు డ్యాష్‌బోర్డ్",
+    farmerDashboardDescription: "మీ పంట, భూమి పరిమాణం మరియు నిధుల అవసరాలను పేర్కొంటూ సేంద్రీయ వ్యవసాయ రుణాలకు దరఖాస్తు చేసుకోండి.",
     currentLoan: "ప్రస్తుత రుణం",
     activeCrops: "ప్రస్తుత పంటలు",
-    cropHistory: "మునుపటి పంటల చరిత్ర",
-    loanHistory: "మునుపటి రుణాల చరిత్ర",
+    landSize: "వ్యవసాయ భూమి పరిమాణం",
+    currentCropStatus: "క్రాప్ స్టేటస్",
+    loanManagement: "లోన్స్ సెక్షన్",
+    previousLoans: "ప్రివియస్ లోన్ హిస్టరీ",
+    previousCrops: "మునుపటి పంట దిగుబడులు",
+    transactions: "లెక్కలు",
     profile: "ప్రొఫైల్",
     logout: "లాగ్ అవుట్",
+    welcomeBack: "తిరిగి స్వాగతం",
     
-    // Add other Telugu translations following the same pattern
-    aboutUsIntro: "అగ్రోఫైనా అనేది ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో ప్రత్యేకమైన రుణ-నుండి-తగ్గింపు మోడల్ ద్వారా కలిపే వినూత్న వేదిక, స్థిరమైన వ్యవ��ాయం మరియు ఆరోగ్యకరమైన రిటర్న్‌లను సృష్టిస్తుంది.",
+    // Investor Dashboard - Telugu translations for updated labels
+    investorDashboard: "పెట్టుబడిదారుల డ్యాష్‌బోర్డ్",
+    investorDashboardDescription: "మీ రైతు రుణాలను నిర్వహించండి మరియు మీ సేంద్రీయ ఉత్పత్తి తగ్గింపు ప్రయోజనాలను ట్రాక్ చేయండి",
+    totalInvestment: "మొత్తం రైతు రుణాలు",
+    activeInvestments: "మద్దతు పొందిన రైతులు",
+    organicProduceValue: "అందుబాటులో ఉన్న సేంద్రీయ తగ్గింపులు",
+    currentInvestments: "కరెంట్ ఇన్వెస్ట్‌మెంట్",
+    investmentProgress: "ఇన్వెస్ట్‌మెంట్ స్టేటస్",
+    previousTransactions: "మునుపటి రుణ లెక్కలు",
     
-    // Continue with other key terms in Telugu but maintaining the business model focus
+    // Common Dashboard Terms
+    currentlyGrowing: "ప్రస్తుతం పెంచుతున్నారు",
+    noActiveLoans: "క్రియాశీల రుణాలు లేవు",
+    activeLoadAmount: "క్రియాశీల రుణ మొత్తం",
+    totalLoansHistory: "మొత్తం రుణాల చరిత్ర",
+    completedHarvests: "పూర్తయిన పంటలు",
+    totalFarmingArea: "మొత్తం వ్యవసాయ ప్రాంతం",
+    farmingExperience: "వ్య���సాయ అనుభవం",
+    applyForNewLoan: "కొత్త రుణానికి దరఖాస్తు చేయండి",
+    manageYourLoans: "మీ రుణాలను నిర్వహించండి",
+    viewAll: "అన్నీ చూడండి",
+    
+    // Login & Registration
+    login: "లాగిన్",
+    register: "రిజిస్టర్",
+    dontHaveAccount: "ఖాతా లేదా?",
+    alreadyHaveAccount: "ఇప్పటికే ఖాతా ఉందా?",
+    signUp: "సైన్ అప్",
+    signIn: "సైన్ ఇన్",
+    
+    // Common Fields
+    fullName: "పూర్తి పేరు",
+    emailAddress: "ఇమెయిల్ చిరునామా",
+    phoneNumber: "ఫోన్ నంబర్",
+    password: "పాస్‌వర్డ్",
+    confirmPassword: "పాస్‌వర్డ్ నిర్ధారించండి",
+    
+    // Farmer Fields
+    farmerLoginTitle: "రైతు లాగిన్",
+    farmerRegistrationTitle: "రైతు రిజిస్ట్రేషన్",
+    aadhaarNumber: "ఆధార్ నంబర్",
+    mobileNumber: "మొబైల్ నంబర్",
+    village: "గ్రామం",
+    district: "జిల్ల��",
+    state: "రాష్ట్రం",
+    typeOfFarming: "సేంద్రీయ వ్యవసాయ రకం",
+    bankAccountDetails: "బ్యాంక్ ఖాతా వివరాలు",
+    accountNumber: "ఖాతా నంబర్",
+    ifscCode: "IFSC కోడ్",
+    bankName: "బ్యాంక్ పేరు",
+    
+    // Investor Fields
+    investorLoginTitle: "పెట్టుబడిదారుల లాగిన్",
+    investorRegistrationTitle: "పెట్టుబడిదారుల రిజిస్ట్రేషన్",
+    panNumber: "PAN నంబర్",
+    occupation: "వృత్తి",
+    city: "నగరం",
+    pincode: "పిన్‌కోడ్",
+    
+    // Form Actions
+    submit: "సమర్పించండి",
+    cancel: "రద్దు చేయండి",
+    required: "అవసరం",
+    optional: "ఐచ్ఛికం",
+    
+    // Farming Types
+    vegetables: "సేంద్రీయ కూరగాయలు",
+    grains: "సేంద్రీయ ధాన్యాలు",
+    fruits: "సేంద్రీయ పండ్లు",
+    cotton: "సేంద్రీయ పత్తి",
+    mixed: "మిశ్రమ సేంద్రీయ వ్యవసాయం",
+    
+    // Footer
+    footerDescription: "వినూత్న రుణ-నుండి-తగ్గింపు ప్రయోజనాల ద్వారా ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలుపుతుంది.",
+    platform: "వేదిక",
+    forInvestors: "పెట్టుబడిదారుల కోసం",
+    forFarmers: "రైతుల కోసం",
+    company: "కంపెనీ",
+    aboutUs: "మా గురించి",
+    support: "మద్దతు",
+    helpCenter: "సహాయ కేంద్రం",
+    copyright: "© 2024 అగ్రోఫైనా. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.",
+    
+    // Contact page
+    contactUs: "మాతో సంప్రదించండి",
+    contactDescription: "మా రుణ-నుండి-తగ్గింపు వేదిక గురించి మద్దతు, భాగస్వామ్య అవకాశాలు లేదా సాధారణ విచారణల కోసం మా బృందంతో సంప్రదించండి.",
+    phone: "ఫోన్",
+    email: "ఇమ���యిల్",
+    address: "చిరునామా",
+    
+    // Testimonials
+    whatOurUsersAreSaying: "మా సమాజం ఏమి చెబుతోంది",
+    testimonialsDescription: "రుణాలు అందించే పెట్టుబడిదారులు మరియు మద్దతు పొందే రైతుల నుండి నిజమైన అనుభవాలు",
+    organicFarmer: "సేంద్రీయ రైతు",
+    investorFromMumbai: "ముంబై నుండి రుణ అందించేవారు",
+    investorFromHyderabad: "హైదరాబాద్ నుండి మద్దతు చేసే పెట్టుబడిదారు",
+    testimonial1Text: "అగ్రోఫైనా ద్వారా సేంద్రీయ రైతులకు రుణాలు అందించడం చాలా బహుమతిగా ఉంది. నగదు రిటర్న్స్‌కు బదులుగా, నా కుటుంబం ఇష్టపడే తాజా సేంద్రీయ ఉత్పత్తులపై అద్భుతమైన తగ్గింపులు పొందుతున్నాను. ఇది ఉద్దేశ్యంతో పెట్టుబడి పెట్���డం!",
+    testimonial2Text: "అగ్రోఫైనా ద్వారా రుణం పొందడం నా వ్యవసాయాన్ని మార్చేసింది. సంక్లిష్టమైన EMI ఒత్తిడి లేదు - కేవలం నాణ్యమైన సేంద్రీయ పంటలు పెంచడంపై దృష్టి. నా మద్దతు చేసే పెట్టుబడిదారులు నా వ్యవసాయాన్ని సందర్శించి ఉత్పత్తి నాణ్యతను మెచ్చుకుంటారు!",
+    testimonial3Text: "అవసరంలో ఉన్న రైతులను మద్దతు చేస్తూ ఆరోగ్యకరమైన సేంద్రీయ కూరగాయలు మరియు పండ్లపై గణనీయమైన తగ్గింపులు పొందడం నాకు ఇష్టం. నా పెట్టుబడి కుటుంబాలకు సహాయపడుతుంది మరియు నా స్వంత కుటుంబాన్ని ఆరోగ్యంగా ఉంచుతుంది. పర్ఫెక్ట్ విన్-విన్ మోడల్!",
+    testimonial1Name: "రాజేష్ కుమార్",
+    testimonial2Name: "ప్రియా రెడ్డి",
+    testimonial3Name: "అమిత్ పటేల్"
   }
 };
 
