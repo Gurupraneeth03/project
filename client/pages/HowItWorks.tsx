@@ -209,29 +209,29 @@ export default function HowItWorks() {
                 <div className="flex items-start space-x-3">
                   <DollarSign className="h-5 w-5 text-green-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold">Easy Funding Access</h4>
-                    <p className="text-sm text-gray-600">Get loans by simply mentioning crop type, land size, and amount needed</p>
+                    <h4 className="font-semibold">{t('easyFundingAccess')}</h4>
+                    <p className="text-sm text-gray-600">{t('getLoansSimply')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Calendar className="h-5 w-5 text-green-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold">Flexible Repayment</h4>
-                    <p className="text-sm text-gray-600">No complex EMI schedules - focus on growing quality organic crops</p>
+                    <h4 className="font-semibold">{t('flexibleRepayment')}</h4>
+                    <p className="text-sm text-gray-600">{t('noComplexEMI')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Users className="h-5 w-5 text-green-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold">Investor Connection</h4>
-                    <p className="text-sm text-gray-600">Build relationships with supporting investors who care about your success</p>
+                    <h4 className="font-semibold">{t('investorConnection')}</h4>
+                    <p className="text-sm text-gray-600">{t('buildRelationships')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Leaf className="h-5 w-5 text-green-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold">Organic Premium</h4>
-                    <p className="text-sm text-gray-600">Get better prices for organic produce and build sustainable farming practices</p>
+                    <h4 className="font-semibold">{t('organicPremium')}</h4>
+                    <p className="text-sm text-gray-600">{t('betterPricesOrganic')}</p>
                   </div>
                 </div>
               </CardContent>
@@ -244,29 +244,29 @@ export default function HowItWorks() {
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">How To Get Started</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('howToGetStarted')}</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Simple registration process for both investors and farmers
+              {t('simpleRegistrationProcess')}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* For Investors */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-primary">For Investors</h3>
+              <h3 className="text-2xl font-bold text-primary">{t('forInvestors')}</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
                   <div>
-                    <h4 className="font-semibold">Register Your Account</h4>
-                    <p className="text-sm text-gray-600">Provide your details including PAN, occupation, and delivery address for organic produce</p>
+                    <h4 className="font-semibold">{t('registerYourAccount')}</h4>
+                    <p className="text-sm text-gray-600">{t('provideDetailsInvestor')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
                   <div>
-                    <h4 className="font-semibold">Browse Farmer Applications</h4>
-                    <p className="text-sm text-gray-600">Review loan requests from needy farmers with their crop plans and funding requirements</p>
+                    <h4 className="font-semibold">{t('browseFarmerApplications')}</h4>
+                    <p className="text-sm text-gray-600">{t('reviewLoanRequests')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
