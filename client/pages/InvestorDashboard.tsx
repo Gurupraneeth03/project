@@ -207,9 +207,9 @@ function InvestorDashboardHome() {
       <div className="mt-8">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
-            <CardTitle>New Investment Opportunities</CardTitle>
+            <CardTitle>{t('newInvestmentOpportunities')}</CardTitle>
             <Button variant="outline" size="sm">
-              Browse All
+              {t('browseAll')}
             </Button>
           </CardHeader>
           <CardContent>
@@ -254,20 +254,20 @@ function InvestorDashboardHome() {
                   </div>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Funding Needed:</span>
+                      <span className="text-gray-600">{t('fundingNeeded')}:</span>
                       <span className="font-medium">₹{opportunity.fundingNeeded.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Season:</span>
+                      <span className="text-gray-600">{t('season')}:</span>
                       <span>{opportunity.season}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Duration:</span>
+                      <span className="text-gray-600">{t('duration')}:</span>
                       <span>{opportunity.duration}</span>
                     </div>
                   </div>
                   <Button size="sm" className="w-full mt-3">
-                    Invest Now
+                    {t('investNow')}
                   </Button>
                 </div>
               ))}
