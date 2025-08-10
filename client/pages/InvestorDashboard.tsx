@@ -18,7 +18,6 @@ import {
   Plus
 } from 'lucide-react';
 import { getInvestmentData } from '@/services/authService';
-import FeatureOverview from '@/components/FeatureOverview';
 import InvestorInvestments from './InvestorInvestments';
 import InvestorProgress from './InvestorProgress';
 import InvestorTransactions from './InvestorTransactions';
