@@ -235,9 +235,7 @@ export default function InvestorDashboard() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <DashboardNavigation />
-      
+    <DashboardNavigation>
       <Routes>
         <Route path="/" element={<InvestorDashboardHome />} />
         <Route path="/investments" element={<InvestorInvestments />} />
@@ -245,6 +243,6 @@ export default function InvestorDashboard() {
         <Route path="/transactions" element={<InvestorTransactions />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </div>
+    </DashboardNavigation>
   );
 }
