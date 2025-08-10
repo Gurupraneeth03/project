@@ -43,11 +43,11 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
       <CardHeader className="pb-3">
         <CardTitle className="text-lg flex items-center space-x-2">
           {userType === 'investor' ? <Users className="h-5 w-5" /> : <Sprout className="h-5 w-5" />}
-          <span>Demo Accounts</span>
-          <Badge variant="secondary" className="text-xs">Testing</Badge>
+          <span>{t('demoAccounts')}</span>
+          <Badge variant="secondary" className="text-xs">{t('testing')}</Badge>
         </CardTitle>
         <p className="text-sm text-gray-600">
-          Use these demo accounts to explore the platform
+          {t('useTheseDemo')}
         </p>
       </CardHeader>
       <CardContent className="space-y-3">
