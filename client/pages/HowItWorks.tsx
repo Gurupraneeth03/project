@@ -33,7 +33,7 @@ export default function HowItWorks() {
             {t('howItWorksDetail')}
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Our Loan-To-Discount Model
+            {t('ourLoanToDiscountModel')}
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
             {t('howItWorksDetailDescription')}
