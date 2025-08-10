@@ -228,8 +228,8 @@ const translations: Record<Language, Record<string, string>> = {
     active: "Active",
     inactive: "Inactive", 
     deadline: "Repayment Deadline",
-    currentInvestments: "Current Farmer Loans",
-    investmentProgress: "Crop Development Progress",
+    currentInvestments: "Current Investment",
+    investmentProgress: "Investment Status",
     previousTransactions: "Previous Loan Transactions",
 
     // Login & Registration
@@ -380,11 +380,11 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Updated Telugu translations for the business model
     sustainableInvestment: "🌱 సేంద్రీయ వ్యవసాయ పెట్టుబడి వేదిక",
-    heroDescription: "ధనవంతులై�� పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలపండి. పెట్టుబడిదారులు పంట సాగుకు రుణాలు అందించి, సాంప్రదాయిక వడ్డీకి బదులుగా తాజా సేంద్ర���య ఉత్పత్తులపై తగ్గింపులు పొందుతారు.",
+    heroDescription: "ధనవంతులై�� పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలపండి. పెట్టుబడిదారులు పంట సాగుకు రుణాలు అందించి, సాంప్రదాయిక వడ్డీకి బదులుగా తాజా సేంద్రీయ ఉత్పత్తులపై తగ్గింపులు పొందుతారు.",
     
     farmerDashboard: "రైతు డ్యాష్‌బోర్డ్",
     investorDashboard: "పెట్టుబడిదారుల డ్యాష్‌బోర్డ్",
-    farmerDashboardDescription: "మీ పంట, భూమి పరిమాణం మరియు నిధుల అవసరాలను పేర్కొంటూ సేంద్రీయ వ్యవసాయ రుణాలకు దరఖాస్తు చేసుకోండి.",
+    farmerDashboardDescription: "మీ పంట, భూమి పరిమాణం మరియు నిధుల అవస���ాలను పేర్కొంటూ సేంద్రీయ వ్యవసాయ రుణాలకు దరఖాస్తు చేసుకోండి.",
     investorDashboardDescription: "మీ రైతు రుణాలను నిర్వహించండి మరియు మీ సేంద్రీయ ఉత్పత్తి తగ్గింపు ప్రయోజనాలను ట్రాక్ చేయండి",
     
     currentLoan: "ప్రస్తుత రుణం",
@@ -395,7 +395,7 @@ const translations: Record<Language, Record<string, string>> = {
     logout: "లాగ్ అవుట్",
     
     // Add other Telugu translations following the same pattern
-    aboutUsIntro: "అగ్రోఫైనా అనేది ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో ప్రత్యేకమైన రుణ-నుండి-తగ్గింపు మోడల్ ద్వారా కలిపే వినూత్న వేదిక, స్థిరమైన వ్యవసాయం మరియు ఆరోగ్యకరమైన రిటర్న్‌లను సృష్టిస్తుంది.",
+    aboutUsIntro: "అగ్రోఫైనా అనేది ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో ప్రత్యేకమైన రుణ-నుండి-తగ్గింపు మోడల్ ద్వారా కలిపే వినూత్న వేదిక, స్థిరమైన వ్యవ��ాయం మరియు ఆరోగ్యకరమైన రిటర్న్‌లను సృష్టిస్తుంది.",
     
     // Continue with other key terms in Telugu but maintaining the business model focus
   }
