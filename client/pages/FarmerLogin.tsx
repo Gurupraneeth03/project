@@ -68,7 +68,7 @@ export default function FarmerLogin() {
         setError(response.error || t('loginFailed'));
       }
     } catch (err) {
-      setError("An unexpected error occurred");
+      setError(t('unexpectedError'));
     } finally {
       setIsLoading(false);
     }
