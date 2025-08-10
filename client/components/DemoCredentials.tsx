@@ -23,13 +23,6 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
       password: 'investor123',
       location: 'Hyderabad, Telangana',
       investment: '₹2,50,000'
-    },
-    {
-      name: 'Rajesh Varma',
-      email: 'rajesh.varma@gmail.com',
-      password: 'investor456',
-      location: 'Hyderabad, Telangana',
-      investment: '₹1,80,000'
     }
   ];
 
@@ -40,13 +33,6 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
       password: 'farmer123',
       location: 'Guntur, Andhra Pradesh',
       landSize: '5 acres'
-    },
-    {
-      name: 'Suresh Reddy',
-      email: 'suresh.reddy@gmail.com',
-      password: 'farmer456',
-      location: 'Guntur, Andhra Pradesh',
-      landSize: '3 hectares'
     }
   ];
 
@@ -57,11 +43,11 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
       <CardHeader className="pb-3">
         <CardTitle className="text-lg flex items-center space-x-2">
           {userType === 'investor' ? <Users className="h-5 w-5" /> : <Sprout className="h-5 w-5" />}
-          <span>Demo Accounts</span>
-          <Badge variant="secondary" className="text-xs">Testing</Badge>
+          <span>{t('demoAccounts')}</span>
+          <Badge variant="secondary" className="text-xs">{t('testing')}</Badge>
         </CardTitle>
         <p className="text-sm text-gray-600">
-          Use these demo accounts to explore the platform
+          {t('useTheseDemo')}
         </p>
       </CardHeader>
       <CardContent className="space-y-3">
@@ -73,31 +59,31 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
                 <p className="text-xs text-gray-600">{account.location}</p>
                 {userType === 'investor' && (
                   <p className="text-xs text-green-600 font-medium">
-                    Total Investment: {(account as any).investment}
+                    {t('totalInvestment')}: {(account as any).investment}
                   </p>
                 )}
                 {userType === 'farmer' && (
                   <p className="text-xs text-green-600 font-medium">
-                    Land: {(account as any).landSize}
+                    {t('land')}: {(account as any).landSize}
                   </p>
                 )}
               </div>
-              <Button 
-                size="sm" 
+              <Button
+                size="sm"
                 variant="outline"
                 onClick={() => onCredentialSelect(account.email, account.password)}
                 className="text-xs"
               >
-                Use Account
+                {t('useAccount')}
               </Button>
             </div>
             <div className="flex items-center space-x-2 text-xs">
               <div className="flex items-center space-x-1">
-                <span className="text-gray-500">Email:</span>
+                <span className="text-gray-500">{t('email')}:</span>
                 <code className="bg-gray-100 px-1 rounded">{account.email}</code>
-                <Button 
-                  size="sm" 
-                  variant="ghost" 
+                <Button
+                  size="sm"
+                  variant="ghost"
                   className="h-4 w-4 p-0"
                   onClick={() => copyToClipboard(account.email)}
                 >
@@ -105,11 +91,11 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
                 </Button>
               </div>
               <div className="flex items-center space-x-1">
-                <span className="text-gray-500">Password:</span>
+                <span className="text-gray-500">{t('password')}:</span>
                 <code className="bg-gray-100 px-1 rounded">{account.password}</code>
-                <Button 
-                  size="sm" 
-                  variant="ghost" 
+                <Button
+                  size="sm"
+                  variant="ghost"
                   className="h-4 w-4 p-0"
                   onClick={() => copyToClipboard(account.password)}
                 >

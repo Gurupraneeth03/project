@@ -15,10 +15,11 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   Eye,
-  Plus
+  Plus,
+  Sprout,
+  Calendar
 } from 'lucide-react';
 import { getInvestmentData } from '@/services/authService';
-import FeatureOverview from '@/components/FeatureOverview';
 import InvestorInvestments from './InvestorInvestments';
 import InvestorProgress from './InvestorProgress';
 import InvestorTransactions from './InvestorTransactions';
@@ -49,18 +50,13 @@ function InvestorDashboardHome() {
 
   const portfolioStats = {
     totalInvestment: (user as any)?.totalInvestment || 250000,
-    portfolioValue: (user as any)?.portfolioValue || 275000,
-    totalReturns: ((user as any)?.portfolioValue || 275000) - ((user as any)?.totalInvestment || 250000),
-    activeInvestments: (user as any)?.activeInvestments || 5
+    activeInvestments: (user as any)?.activeInvestments || 5,
+    organicProduceValue: (user as any)?.organicProduceValue || 12500,
+    monthlyBenefits: (user as any)?.monthlyBenefits || 3200
   };
-
-  const returnPercentage = (portfolioStats.totalReturns / portfolioStats.totalInvestment) * 100;
 
   return (
     <div className="max-w-7xl mx-auto p-6">
-      {/* Feature Overview */}
-      <FeatureOverview userType="investor" />
-
       {/* Welcome Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">
@@ -71,8 +67,8 @@ function InvestorDashboardHome() {
         </p>
       </div>
 
-      {/* Portfolio Statistics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      {/* Investment Statistics - Removed Portfolio Value and Total Returns */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">{t('totalInvestment')}</CardTitle>
@@ -88,42 +84,26 @@ function InvestorDashboardHome() {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">{t('portfolioValue')}</CardTitle>
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">₹{portfolioStats.portfolioValue.toLocaleString()}</div>
-            <p className="text-xs text-green-600 flex items-center">
-              <ArrowUpRight className="h-3 w-3 mr-1" />
-              +{returnPercentage.toFixed(1)}% {t('totalReturns')}
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">{t('totalReturns')}</CardTitle>
-            <BarChart3 className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-green-600">
-              +₹{portfolioStats.totalReturns.toLocaleString()}
-            </div>
-            <p className="text-xs text-muted-foreground">
-              {returnPercentage > 0 ? 'Profit' : 'Loss'} this period
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">{t('activeInvestments')}</CardTitle>
             <Activity className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{portfolioStats.activeInvestments}</div>
             <p className="text-xs text-muted-foreground">
-              Across multiple crops
+              {t('acrossMultipleCrops')}
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">{t('organicProduceValue')}</CardTitle>
+            <Sprout className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">₹{portfolioStats.organicProduceValue.toLocaleString()}</div>
+            <p className="text-xs text-green-600">
+              {t('monthlyBenefitsAvailable')}
             </p>
           </CardContent>
         </Card>
@@ -157,7 +137,7 @@ function InvestorDashboardHome() {
                       <span className="text-xs text-gray-500">{investment.progress}%</span>
                     </div>
                     <Badge variant={investment.status === 'Active' ? 'default' : 'secondary'} className="text-xs mt-1">
-                      {investment.status}
+                      {t(investment.status.toLowerCase())}
                     </Badge>
                   </div>
                 </div>
@@ -176,27 +156,46 @@ function InvestorDashboardHome() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {investmentData?.transactions?.slice(0, 3).map((transaction: any) => (
-                <div key={transaction.id} className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                      transaction.type === 'investment' ? 'bg-blue-100' : 'bg-green-100'
-                    }`}>
-                      {transaction.type === 'investment' ? 
-                        <ArrowDownRight className="h-4 w-4 text-blue-600" /> : 
-                        <ArrowUpRight className="h-4 w-4 text-green-600" />
-                      }
-                    </div>
+              {[
+                {
+                  type: t('investment'),
+                  description: t('newInvestmentInTomatoFarming'),
+                  amount: '+₹25,000',
+                  date: t('twoDaysAgo'),
+                  status: t('completed')
+                },
+                {
+                  type: t('benefit'),
+                  description: t('organicProduceDiscountUsed'),
+                  amount: '-₹850',
+                  date: t('oneWeekAgo'),
+                  status: t('completed')
+                },
+                {
+                  type: t('update'),
+                  description: t('cropProgressUpdateReceived'),
+                  amount: '',
+                  date: t('threeDaysAgo'),
+                  status: t('info')
+                }
+              ].map((activity, index) => (
+                <div key={index} className="flex items-center justify-between py-2">
+                  <div className="flex items-start space-x-3">
+                    <div className={`w-2 h-2 rounded-full mt-2 ${
+                      activity.status === t('completed') ? 'bg-green-500' : 'bg-blue-500'
+                    }`} />
                     <div>
-                      <p className="text-sm font-medium">{transaction.description}</p>
-                      <p className="text-xs text-gray-500">{transaction.date}</p>
+                      <p className="text-sm font-medium">{activity.description}</p>
+                      <p className="text-xs text-gray-500">{activity.date}</p>
                     </div>
                   </div>
-                  <div className={`font-medium ${
-                    transaction.amount > 0 ? 'text-green-600' : 'text-red-600'
-                  }`}>
-                    {transaction.amount > 0 ? '+' : ''}₹{Math.abs(transaction.amount).toLocaleString()}
-                  </div>
+                  {activity.amount && (
+                    <p className={`text-sm font-medium ${
+                      activity.amount.startsWith('+') ? 'text-green-600' : 'text-red-600'
+                    }`}>
+                      {activity.amount}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -204,29 +203,78 @@ function InvestorDashboardHome() {
         </Card>
       </div>
 
-      {/* Quick Actions */}
-      <Card className="mt-6">
-        <CardHeader>
-          <CardTitle>{t('quickActions')}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Button className="flex items-center justify-center space-x-2 h-12">
-              <Plus className="h-4 w-4" />
-              <span>New Investment</span>
+      {/* Investment Opportunities */}
+      <div className="mt-8">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between">
+            <CardTitle>New Investment Opportunities</CardTitle>
+            <Button variant="outline" size="sm">
+              Browse All
             </Button>
-            <Button variant="outline" className="flex items-center justify-center space-x-2 h-12" 
-                    onClick={() => navigate('/investor-dashboard/investments')}>
-              <Eye className="h-4 w-4" />
-              <span>{t('viewDetails')}</span>
-            </Button>
-            <Button variant="outline" className="flex items-center justify-center space-x-2 h-12">
-              <BarChart3 className="h-4 w-4" />
-              <span>Analytics</span>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  cropType: 'Organic Carrots',
+                  farmer: 'Suresh Kumar',
+                  location: 'Guntur, AP',
+                  fundingNeeded: 35000,
+                  season: 'Rabi Season',
+                  duration: '4 Months',
+                  image: '🥕'
+                },
+                {
+                  cropType: 'Organic Spinach',
+                  farmer: 'Priya Reddy',
+                  location: 'Warangal, TS',
+                  fundingNeeded: 22000,
+                  season: 'Winter Season',
+                  duration: '3 Months',
+                  image: '🥬'
+                },
+                {
+                  cropType: 'Organic Onions',
+                  farmer: 'Ravi Sharma',
+                  location: 'Kurnool, AP',
+                  fundingNeeded: 45000,
+                  season: 'Kharif Season',
+                  duration: '5 Months',
+                  image: '🧅'
+                }
+              ].map((opportunity, index) => (
+                <div key={index} className="p-4 border rounded-lg hover:shadow-md transition-shadow">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="text-2xl">{opportunity.image}</div>
+                    <div>
+                      <h4 className="font-medium">{opportunity.cropType}</h4>
+                      <p className="text-sm text-gray-600">{opportunity.farmer}</p>
+                      <p className="text-xs text-gray-500">{opportunity.location}</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Funding Needed:</span>
+                      <span className="font-medium">₹{opportunity.fundingNeeded.toLocaleString()}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Season:</span>
+                      <span>{opportunity.season}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Duration:</span>
+                      <span>{opportunity.duration}</span>
+                    </div>
+                  </div>
+                  <Button size="sm" className="w-full mt-3">
+                    Invest Now
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
@@ -235,9 +283,7 @@ export default function InvestorDashboard() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <DashboardNavigation />
-      
+    <DashboardNavigation>
       <Routes>
         <Route path="/" element={<InvestorDashboardHome />} />
         <Route path="/investments" element={<InvestorInvestments />} />
@@ -245,6 +291,6 @@ export default function InvestorDashboard() {
         <Route path="/transactions" element={<InvestorTransactions />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </div>
+    </DashboardNavigation>
   );
 }

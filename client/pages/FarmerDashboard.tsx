@@ -17,10 +17,10 @@ import {
   AlertTriangle,
   Plus,
   FileText,
-  Activity
+  Activity,
+  Thermometer
 } from 'lucide-react';
 import { getFarmingData } from '@/services/authService';
-import FeatureOverview from '@/components/FeatureOverview';
 import FarmerCrops from './FarmerCrops';
 import FarmerLoans from './FarmerLoans';
 import FarmerTransactions from './FarmerTransactions';
@@ -50,18 +50,15 @@ function FarmerDashboardHome() {
   }
 
   const farmerStats = {
-    currentLoan: (user as any)?.currentLoan || 75000,
-    totalLoans: (user as any)?.totalLoans || 3,
+    currentLoan: (user as any)?.currentLoan || 0, // Set to 0 if no active loan
+    totalLoans: (user as any)?.totalLoansHistory || 2, // Previous loans count
     activeCrops: farmingData?.currentCrops?.length || 1,
-    cropHistory: (user as any)?.cropHistory || 5,
+    completedCrops: (user as any)?.completedCropsHistory || 8, // Previous crops count
     landSize: (user as any)?.landSize || '5 acres'
   };
 
   return (
     <div className="max-w-7xl mx-auto p-6">
-      {/* Feature Overview */}
-      <FeatureOverview userType="farmer" />
-
       {/* Welcome Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">
@@ -80,9 +77,11 @@ function FarmerDashboardHome() {
             <DollarSign className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">₹{farmerStats.currentLoan.toLocaleString()}</div>
+            <div className="text-2xl font-bold">
+              {farmerStats.currentLoan > 0 ? `₹${farmerStats.currentLoan.toLocaleString()}` : t('noActiveLoan')}
+            </div>
             <p className="text-xs text-muted-foreground">
-              {farmerStats.currentLoan > 0 ? 'Active loan amount' : 'No active loans'}
+              {farmerStats.currentLoan > 0 ? t('activeLoanAmount') : t('applyForNewLoan')}
             </p>
           </CardContent>
         </Card>
@@ -95,33 +94,33 @@ function FarmerDashboardHome() {
           <CardContent>
             <div className="text-2xl font-bold">{farmerStats.activeCrops}</div>
             <p className="text-xs text-muted-foreground">
-              Currently growing
+              {t('currentlyGrowing')}
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Land Size</CardTitle>
+            <CardTitle className="text-sm font-medium">{t('landSize')}</CardTitle>
             <TrendingUp className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{farmerStats.landSize}</div>
             <p className="text-xs text-muted-foreground">
-              Total farming area
+              {t('totalFarmingArea')}
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Loan History</CardTitle>
+            <CardTitle className="text-sm font-medium">{t('farmingExperience')}</CardTitle>
             <FileText className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{farmerStats.totalLoans}</div>
+            <div className="text-2xl font-bold">{farmerStats.completedCrops}</div>
             <p className="text-xs text-muted-foreground">
-              Total loans taken
+              {t('completedHarvests')}
             </p>
           </CardContent>
         </Card>
@@ -145,20 +144,20 @@ function FarmerDashboardHome() {
                       <div className="text-2xl">{crop.image}</div>
                       <div>
                         <h4 className="font-medium">{crop.name}</h4>
-                        <p className="text-sm text-gray-600">Area: {crop.area}</p>
+                        <p className="text-sm text-gray-600">{t('area')}: {crop.area}</p>
                       </div>
                     </div>
                     <Badge variant={
-                      crop.healthStatus === 'Excellent' ? 'default' : 
+                      crop.healthStatus === 'Excellent' ? 'default' :
                       crop.healthStatus === 'Good' ? 'secondary' : 'destructive'
                     }>
-                      {crop.healthStatus}
+                      {t(crop.healthStatus.toLowerCase())}
                     </Badge>
                   </div>
                   
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span>Growth Progress</span>
+                      <span>{t('growthProgress')}</span>
                       <span>{crop.progress}%</span>
                     </div>
                     <Progress value={crop.progress} className="h-2" />
@@ -175,7 +174,7 @@ function FarmerDashboardHome() {
                     </div>
                     <div className="flex items-center space-x-2">
                       <Calendar className="h-4 w-4 text-green-500" />
-                      <span className="text-gray-600">May 15</span>
+                      <span className="text-gray-600">{t('may15')}</span>
                     </div>
                   </div>
                 </div>
@@ -184,58 +183,51 @@ function FarmerDashboardHome() {
           </CardContent>
         </Card>
 
-        {/* Loan Management */}
+        {/* Loan Management - No EMI Details */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle>{t('loanManagement')}</CardTitle>
             <Button variant="outline" size="sm" onClick={() => navigate('/farmer-dashboard/loans')}>
-              {t('applyForLoan')}
+              {farmerStats.currentLoan > 0 ? t('manageLoan') : t('applyForLoan')}
             </Button>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {farmingData?.loans?.map((loan: any) => (
-                <div key={loan.id} className="p-4 border rounded-lg">
+              {farmerStats.currentLoan > 0 ? (
+                <div className="p-4 border rounded-lg">
                   <div className="flex items-center justify-between mb-3">
                     <div>
-                      <h4 className="font-medium">₹{loan.amount.toLocaleString()}</h4>
-                      <p className="text-sm text-gray-600">{loan.purpose}</p>
+                      <h4 className="font-medium">₹{farmerStats.currentLoan.toLocaleString()}</h4>
+                      <p className="text-sm text-gray-600">{t('seasonalCropLoan')}</p>
                     </div>
-                    <Badge variant={loan.status === 'Active' ? 'default' : 'secondary'}>
-                      {loan.status}
-                    </Badge>
+                    <Badge variant="default">{t('active')}</Badge>
                   </div>
                   
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span>Remaining</span>
-                      <span>₹{loan.remainingAmount.toLocaleString()}</span>
+                      <span>{t('loanStatus')}</span>
+                      <span className="text-green-600">{t('approvedAndDisbursed')}</span>
                     </div>
-                    <Progress value={(loan.remainingAmount / loan.amount) * 100} className="h-2" />
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-4 mt-3 text-sm">
-                    <div>
-                      <span className="text-gray-600">Interest Rate:</span>
-                      <p className="font-medium">{loan.interestRate}%</p>
+                    <div className="flex justify-between text-sm">
+                      <span>{t('purpose')}</span>
+                      <span>{t('organicVegetableFarming')}</span>
                     </div>
-                    <div>
-                      <span className="text-gray-600">Due Date:</span>
-                      <p className="font-medium">{loan.dueDate}</p>
+                    <div className="flex justify-between text-sm">
+                      <span>{t('applicationDate')}</span>
+                      <span>{t('jan15_2024')}</span>
                     </div>
                   </div>
                 </div>
-              ))}
-              
-              {(!farmingData?.loans || farmingData.loans.length === 0) && (
-                <div className="text-center py-8">
-                  <div className="text-gray-400 mb-4">
+              ) : (
+                <div className="p-6 text-center border rounded-lg">
+                  <div className="text-gray-400 mb-3">
                     <DollarSign className="h-12 w-12 mx-auto" />
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">No Active Loans</h3>
-                  <p className="text-gray-600 mb-4">You don't have any active loans at the moment.</p>
-                  <Button>
-                    <Plus className="h-4 w-4 mr-2" />
+                  <h4 className="font-medium text-gray-900 mb-2">{t('noActiveLoans')}</h4>
+                  <p className="text-sm text-gray-600 mb-4">
+                    {t('applyForSeasonalLoan')}
+                  </p>
+                  <Button size="sm" onClick={() => navigate('/farmer-dashboard/loans')}>
                     {t('applyForLoan')}
                   </Button>
                 </div>
@@ -245,79 +237,154 @@ function FarmerDashboardHome() {
         </Card>
       </div>
 
-      {/* Crop History Preview */}
-      <Card className="mt-6">
-        <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle>{t('previousCrops')}</CardTitle>
-          <Button variant="outline" size="sm" onClick={() => navigate('/farmer-dashboard/crop-history')}>
-            {t('viewAll')}
-          </Button>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {farmingData?.cropHistory?.slice(0, 3).map((crop: any) => (
-              <div key={crop.id} className="p-4 border rounded-lg">
-                <div className="flex items-center justify-between mb-2">
-                  <h4 className="font-medium">{crop.cropName}</h4>
-                  <Badge variant="secondary">{crop.season}</Badge>
-                </div>
-                <div className="space-y-1 text-sm text-gray-600">
-                  <p>Area: {crop.area}</p>
-                  <p>Yield: {crop.yield}</p>
-                  <p className="text-green-600 font-medium">Profit: ₹{crop.profit.toLocaleString()}</p>
+      {/* Weather & Farm Insights */}
+      <div className="mt-8">
+        <Card>
+          <CardHeader>
+            <CardTitle>{t('todaysFarmInsights')}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg">
+                <Droplets className="h-8 w-8 text-blue-600" />
+                <div>
+                  <p className="text-sm text-blue-700 font-medium">{t('soilMoisture')}</p>
+                  <p className="text-xl font-bold text-blue-700">68%</p>
+                  <p className="text-xs text-blue-600">{t('optimalLevel')}</p>
                 </div>
               </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+              
+              <div className="flex items-center space-x-3 p-4 bg-yellow-50 rounded-lg">
+                <Sun className="h-8 w-8 text-yellow-600" />
+                <div>
+                  <p className="text-sm text-yellow-700 font-medium">{t('sunlight')}</p>
+                  <p className="text-xl font-bold text-yellow-700">7.2 hrs</p>
+                  <p className="text-xs text-yellow-600">{t('goodExposure')}</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3 p-4 bg-green-50 rounded-lg">
+                <Thermometer className="h-8 w-8 text-green-600" />
+                <div>
+                  <p className="text-sm text-green-700 font-medium">{t('temperature')}</p>
+                  <p className="text-xl font-bold text-green-700">28°C</p>
+                  <p className="text-xs text-green-600">{t('idealRange')}</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3 p-4 bg-purple-50 rounded-lg">
+                <Activity className="h-8 w-8 text-purple-600" />
+                <div>
+                  <p className="text-sm text-purple-700 font-medium">{t('cropHealth')}</p>
+                  <p className="text-xl font-bold text-purple-700">95%</p>
+                  <p className="text-xs text-purple-600">{t('excellent')}</p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+}
 
-      {/* Quick Actions */}
-      <Card className="mt-6">
-        <CardHeader>
-          <CardTitle>{t('quickActions')}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <Button className="flex items-center justify-center space-x-2 h-12">
-              <Plus className="h-4 w-4" />
-              <span>Add New Crop</span>
-            </Button>
-            <Button variant="outline" className="flex items-center justify-center space-x-2 h-12"
-                    onClick={() => navigate('/farmer-dashboard/loans')}>
-              <DollarSign className="h-4 w-4" />
-              <span>{t('applyForLoan')}</span>
-            </Button>
-            <Button variant="outline" className="flex items-center justify-center space-x-2 h-12"
-                    onClick={() => navigate('/farmer-dashboard/crops')}>
-              <Activity className="h-4 w-4" />
-              <span>Update Crop Status</span>
-            </Button>
-            <Button variant="outline" className="flex items-center justify-center space-x-2 h-12">
-              <FileText className="h-4 w-4" />
-              <span>View Reports</span>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+// Dynamic route components for Previous Crops and Previous Loans
+function PreviousCropsHistory() {
+  const { user } = useAuth();
+  const { t } = useLanguage();
+  
+  const previousCrops = [
+    { id: 1, name: 'Organic Tomatoes', season: 'Rabi 2023', yield: '2.5 tons', profit: '₹45,000', image: '🍅' },
+    { id: 2, name: 'Organic Carrots', season: 'Winter 2023', yield: '1.8 tons', profit: '₹32,000', image: '🥕' },
+    { id: 3, name: 'Organic Spinach', season: 'Kharif 2023', yield: '0.8 tons', profit: '₹18,000', image: '🥬' },
+    { id: 4, name: 'Organic Onions', season: 'Summer 2022', yield: '3.2 tons', profit: '₹58,000', image: '🧅' },
+    { id: 5, name: 'Organic Potatoes', season: 'Winter 2022', yield: '2.1 tons', profit: '₹38,000', image: '🥔' }
+  ];
+
+  return (
+    <div className="max-w-7xl mx-auto p-6">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900">Previous Crops History</h1>
+        <p className="text-gray-600 mt-2">Track your farming journey and harvest records</p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {previousCrops.map((crop) => (
+          <Card key={crop.id}>
+            <CardContent className="p-6">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="text-3xl">{crop.image}</div>
+                <div>
+                  <h3 className="font-semibold">{crop.name}</h3>
+                  <p className="text-sm text-gray-600">{crop.season}</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-sm text-gray-600">Yield:</span>
+                  <span className="font-medium">{crop.yield}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-sm text-gray-600">Profit:</span>
+                  <span className="font-medium text-green-600">{crop.profit}</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function PreviousLoansHistory() {
+  const { user } = useAuth();
+  const { t } = useLanguage();
+  
+  const previousLoans = [
+    { id: 1, amount: 75000, purpose: 'Seasonal Crop Loan', status: 'Completed', date: 'Jan 2023', repaymentDate: 'Jun 2023' },
+    { id: 2, amount: 45000, purpose: 'Equipment Purchase', status: 'Completed', date: 'Aug 2022', repaymentDate: 'Dec 2022' }
+  ];
+
+  return (
+    <div className="max-w-7xl mx-auto p-6">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900">Previous Loans History</h1>
+        <p className="text-gray-600 mt-2">Review your loan history and repayment records</p>
+      </div>
+
+      <div className="space-y-4">
+        {previousLoans.map((loan) => (
+          <Card key={loan.id}>
+            <CardContent className="p-6">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-semibold text-lg">₹{loan.amount.toLocaleString()}</h3>
+                  <p className="text-gray-600">{loan.purpose}</p>
+                  <p className="text-sm text-gray-500">Applied: {loan.date} | Repaid: {loan.repaymentDate}</p>
+                </div>
+                <Badge variant="secondary">{loan.status}</Badge>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }
 
 export default function FarmerDashboard() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <DashboardNavigation />
-      
+    <DashboardNavigation>
       <Routes>
         <Route path="/" element={<FarmerDashboardHome />} />
         <Route path="/crops" element={<FarmerCrops />} />
         <Route path="/loans" element={<FarmerLoans />} />
-        <Route path="/loan-history" element={<div className="p-6"><h1>Previous Loans</h1></div>} />
-        <Route path="/crop-history" element={<div className="p-6"><h1>Previous Crops</h1></div>} />
+        <Route path="/loan-history" element={<PreviousLoansHistory />} />
+        <Route path="/crop-history" element={<PreviousCropsHistory />} />
         <Route path="/transactions" element={<FarmerTransactions />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </div>
+    </DashboardNavigation>
   );
 }

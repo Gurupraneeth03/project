@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLanguage } from '@/contexts/LanguageContext';
-import DashboardNavigation from '@/components/DashboardNavigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
@@ -51,10 +50,7 @@ export default function InvestorProgress() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <DashboardNavigation />
-      
-      <div className="max-w-7xl mx-auto p-6">
+    <div className="max-w-7xl mx-auto p-6">
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900">
@@ -252,7 +248,6 @@ export default function InvestorProgress() {
             </CardContent>
           </Card>
         )}
-      </div>
     </div>
   );
 }
