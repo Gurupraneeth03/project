@@ -20,7 +20,6 @@ import {
   Activity
 } from 'lucide-react';
 import { getFarmingData } from '@/services/authService';
-import FeatureOverview from '@/components/FeatureOverview';
 import FarmerCrops from './FarmerCrops';
 import FarmerLoans from './FarmerLoans';
 import FarmerTransactions from './FarmerTransactions';
