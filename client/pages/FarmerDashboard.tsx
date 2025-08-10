@@ -306,9 +306,7 @@ function FarmerDashboardHome() {
 
 export default function FarmerDashboard() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <DashboardNavigation />
-      
+    <DashboardNavigation>
       <Routes>
         <Route path="/" element={<FarmerDashboardHome />} />
         <Route path="/crops" element={<FarmerCrops />} />
@@ -318,6 +316,6 @@ export default function FarmerDashboard() {
         <Route path="/transactions" element={<FarmerTransactions />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </div>
+    </DashboardNavigation>
   );
 }
