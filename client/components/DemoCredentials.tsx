@@ -33,13 +33,6 @@ export default function DemoCredentials({ userType, onCredentialSelect }: DemoCr
       password: 'farmer123',
       location: 'Guntur, Andhra Pradesh',
       landSize: '5 acres'
-    },
-    {
-      name: 'Suresh Reddy',
-      email: 'suresh.reddy@gmail.com',
-      password: 'farmer456',
-      location: 'Guntur, Andhra Pradesh',
-      landSize: '3 hectares'
     }
   ];
 
