@@ -170,11 +170,11 @@ const translations: Record<Language, Record<string, string>> = {
     cropHistory: "Previous Harvest History",
     loanHistory: "Previous Loan History", 
     landSize: "Farm Land Size",
-    currentCropStatus: "Current Crop Development",
-    loanManagement: "Loan Application Management",
-    previousLoans: "Previous Farming Loans",
+    currentCropStatus: "Crop Status",
+    loanManagement: "Loans Section",
+    previousLoans: "Previous Loan History",
     previousCrops: "Previous Crop Yields",
-    transactions: "Financial Transactions",
+    transactions: "Transactions",
 
     // Investor Dashboard - Updated to reflect loan-to-discount model
     investorDashboard: "Investor Dashboard", 
@@ -380,7 +380,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Updated Telugu translations for the business model
     sustainableInvestment: "🌱 సేంద్రీయ వ్యవసాయ పెట్టుబడి వేదిక",
-    heroDescription: "ధనవంతులైన పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలపండి. పెట్టుబడిదారులు పంట సాగుకు రుణాలు అందించి, సాంప్రదాయిక వడ్డీకి ��దులుగా తాజా సేంద్రీయ ఉత్పత్తులపై తగ్గింపులు పొందుతారు.",
+    heroDescription: "ధనవంతులై�� పెట్టుబడిదారులను అవసరంలో ఉన్న సేంద్రీయ రైతులతో కలపండి. పెట్టుబడిదారులు పంట సాగుకు రుణాలు అందించి, సాంప్రదాయిక వడ్డీకి బదులుగా తాజా సేంద్ర���య ఉత్పత్తులపై తగ్గింపులు పొందుతారు.",
     
     farmerDashboard: "రైతు డ్యాష్‌బోర్డ్",
     investorDashboard: "పెట్టుబడిదారుల డ్యాష్‌బోర్డ్",
