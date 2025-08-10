@@ -28,13 +28,13 @@ export default function Index() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <Badge className="mb-6 bg-primary/10 text-primary hover:bg-primary/20">
-            <p>" Funding Farms, Feeding Futures "</p>
+            <p>{t('fundingFarmsFeedingFutures')}</p>
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Invest In
-            <span className="text-primary"> Organic Farming</span>
+            {t('investIn')}
+            <span className="text-primary">{t('organicFarming')}</span>
             <br />
-            <p>Harvest Healthy Benefits</p>
+            <p>{t('harvestHealthyBenefits')}</p>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             {t('heroDescription')}
