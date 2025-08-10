@@ -90,7 +90,7 @@ function InvestorDashboardHome() {
           <CardContent>
             <div className="text-2xl font-bold">{portfolioStats.activeInvestments}</div>
             <p className="text-xs text-muted-foreground">
-              Across Multiple Crops
+              {t('acrossMultipleCrops')}
             </p>
           </CardContent>
         </Card>
@@ -103,7 +103,7 @@ function InvestorDashboardHome() {
           <CardContent>
             <div className="text-2xl font-bold">₹{portfolioStats.organicProduceValue.toLocaleString()}</div>
             <p className="text-xs text-green-600">
-              Monthly Benefits Available
+              {t('monthlyBenefitsAvailable')}
             </p>
           </CardContent>
         </Card>
@@ -115,7 +115,7 @@ function InvestorDashboardHome() {
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle>{t('currentInvestments')}</CardTitle>
             <Button variant="outline" size="sm" onClick={() => navigate('/investor-dashboard/investments')}>
-              View All
+              {t('viewAll')}
             </Button>
           </CardHeader>
           <CardContent>
@@ -137,7 +137,7 @@ function InvestorDashboardHome() {
                       <span className="text-xs text-gray-500">{investment.progress}%</span>
                     </div>
                     <Badge variant={investment.status === 'Active' ? 'default' : 'secondary'} className="text-xs mt-1">
-                      {investment.status}
+                      {t(investment.status.toLowerCase())}
                     </Badge>
                   </div>
                 </div>
@@ -149,9 +149,9 @@ function InvestorDashboardHome() {
         {/* Recent Activity */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
-            <CardTitle>Recent Activity</CardTitle>
+            <CardTitle>{t('recentActivity')}</CardTitle>
             <Button variant="outline" size="sm" onClick={() => navigate('/investor-dashboard/transactions')}>
-              View All
+              {t('viewAll')}
             </Button>
           </CardHeader>
           <CardContent>
