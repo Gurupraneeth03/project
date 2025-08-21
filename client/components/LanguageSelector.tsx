@@ -21,22 +21,27 @@ export default function LanguageSelector() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm" className="flex items-center space-x-2">
-          <Globe className="h-4 w-4" />
-          <span className="hidden md:inline">{currentLanguage?.name}</span>
+        <Button variant="outline" size="sm" className="flex items-center space-x-2 border-2 hover:bg-primary/5 hover:border-primary/30 transition-all duration-200">
+          <Globe className="h-4 w-4 text-gray-600" />
+          <span className="hidden md:inline font-medium">{currentLanguage?.name}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-40">
+      <DropdownMenuContent align="end" className="w-44 p-2">
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => setLanguage(lang.code)}
-            className={`flex items-center space-x-2 ${
-              language === lang.code ? 'bg-primary/10' : ''
+            className={`flex items-center space-x-3 p-3 rounded-lg cursor-pointer transition-all duration-200 ${
+              language === lang.code 
+                ? 'bg-primary/10 text-primary border border-primary/20' 
+                : 'hover:bg-gray-50'
             }`}
           >
-            <span>{lang.flag}</span>
-            <span>{lang.name}</span>
+            <span className="text-lg">{lang.flag}</span>
+            <span className="font-medium">{lang.name}</span>
+            {language === lang.code && (
+              <div className="ml-auto w-2 h-2 bg-primary rounded-full"></div>
+            )}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

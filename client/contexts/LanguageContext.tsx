@@ -545,6 +545,13 @@ const translations: Record<Language, Record<string, string>> = {
     logout: "Logout",
     english: "English",
     telugu: "తెలుగు",
+    
+    // Additional missing translations
+    howItWorks: "How It Works",
+    termsConditions: "Terms & Conditions",
+    helpCenter: "Help Center",
+    faq: "FAQ",
+    privacyPolicy: "Privacy Policy",
 
     // Additional translations for hardcoded text found in components
     monitorCropsHealth: "Monitor your crops' health and growth progress",
@@ -1169,7 +1176,14 @@ const translations: Record<Language, Record<string, string>> = {
     farmer: "రైతు",
     location: "ప్రాంతం",
     investment: "పెట్టుబడి",
-    return: "రిటర్న్"
+    return: "రిటర్న్",
+    
+    // Additional missing Telugu translations
+    howItWorks: "ఎలా పని చేస్తుంది",
+    termsConditions: "నిబంధనలు & షరతులు",
+    helpCenter: "సహాయ కేంద్రం",
+    faq: "ప్రశ్నలు & జవాబులు",
+    privacyPolicy: "గోప్యతా విధానం"
   }
 };
 
@@ -1186,6 +1200,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const changeLanguage = (lang: Language) => {
     setLanguage(lang);
     localStorage.setItem('language', lang);
+    // Set document language attribute for proper font rendering
+    document.documentElement.lang = lang;
+    document.documentElement.setAttribute('data-lang', lang);
   };
 
   const t = (key: string): string => {
@@ -1197,6 +1214,12 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     // Fallback: format the key itself to Title Case if translation not found
     return formatToTitleCase(key);
   };
+
+  // Set initial language attribute
+  useEffect(() => {
+    document.documentElement.lang = language;
+    document.documentElement.setAttribute('data-lang', language);
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage: changeLanguage, t }}>

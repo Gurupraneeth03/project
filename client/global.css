@@ -98,28 +98,74 @@
 @layer base {
   * {
     @apply border-border;
-    font-family: 'Noto Sans', 'Noto Sans Telugu', sans-serif;
+    font-family: 'Noto Sans', 'Noto Sans Telugu', 'Segoe UI', system-ui, sans-serif;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Noto Sans', 'Noto Sans Telugu', sans-serif;
+    font-family: 'Noto Sans', 'Noto Sans Telugu', 'Segoe UI', system-ui, sans-serif;
     font-feature-settings: "kern" 1;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Telugu-specific improvements */
+  /* Enhanced Telugu-specific improvements */
   [lang="te"], [lang="te"] * {
-    font-family: 'Noto Sans Telugu', 'Noto Sans', sans-serif;
-    letter-spacing: 0.01em;
-    line-height: 1.6;
+    font-family: 'Noto Sans Telugu', 'Noto Sans', 'Segoe UI', system-ui, sans-serif;
+    letter-spacing: 0.015em;
+    line-height: 1.7;
+    word-spacing: 0.05em;
   }
 
   /* Prevent Telugu character overlapping */
   .telugu-text {
-    font-family: 'Noto Sans Telugu', 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans Telugu', 'Noto Sans', 'Segoe UI', system-ui, sans-serif;
     letter-spacing: 0.02em;
     word-spacing: 0.1em;
-    line-height: 1.7;
+    line-height: 1.8;
+  }
+
+  /* Modern scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+  }
+
+  /* Enhanced focus states */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
+
+  /* Smooth transitions */
+  * {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  /* Enhanced button interactions */
+  button:active {
+    transform: scale(0.98);
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  /* Gradient text support */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 }
